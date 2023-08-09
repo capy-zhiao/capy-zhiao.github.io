@@ -76,7 +76,7 @@ Now, my research skills are mainly in these areas:
 - *2020.05*, <b>2th</b>, The Sichuan University Network Space Security Skill Competition for College Students. 
 
 # 📖 Educations
-- *2019.09 - 2022.06*, Undergraduate, Sichuan University. 
+- *2019.09 - 2023.06*, Undergraduate, Sichuan University. 
 
 <!-- # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 

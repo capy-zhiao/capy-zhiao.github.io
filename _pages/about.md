@@ -19,7 +19,7 @@ redirect_from:
 
 # 🐣 about-me
 
-Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from <a href="https://www.scu.edu.cn/">Sichuan University</a> on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the <a href="http://www.is.cas.cn/">Intelligence Engineering Lab at the Institute of Software, Chinese Academy of Sciences (ISCAS)</a>. After that, I also have a project with <a href="https://www.osu.edu/">The Ohio State University</a>.
+Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from <a href="https://www.scu.edu.cn/">Sichuan University</a> on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the <a href="http://www.is.cas.cn/">Intelligence Engineering Lab at the Institute of Software, Chinese Academy of Sciences (ISCAS)</a>. After that, I am working with Prof.Zhiqiang Lin from<a href="https://www.osu.edu/">The Ohio State University</a> .
 
 <h2>Ph.D. Aspirations</h2>
   <a style="color:red; text-decoration:none;">I'm actively seeking a Ph.D. position for Fall 2024, and I'm committed to making projects that integrate with real-world security and privacy!</a>

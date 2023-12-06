@@ -19,9 +19,9 @@ redirect_from:
 
 # 🐣 about-me
 
-Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from <a href="https://www.scu.edu.cn/">Sichuan University</a> on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the <a href="http://www.is.cas.cn/">Intelligence Engineering Lab at the Institute of Software, Chinese Academy of Sciences (ISCAS)</a>. Currently, I am working with <a href="https://web.cse.ohio-state.edu/~lin.3021/">Professor.Zhiqiang Lin from the Ohio State University, and <a href="https://cs.uwaterloo.ca/~yaafer/">Professor. Yousra Aafer from the University of Waterloo</a> .
+Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from <a href="https://www.scu.edu.cn/">Sichuan University</a> on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the <a href="http://www.is.cas.cn/">Intelligence Engineering Lab at the Institute of Software, Chinese Academy of Sciences (ISCAS)</a>. Currently, I am working with <a href="https://web.cse.ohio-state.edu/~lin.3021/">Professor.Zhiqiang Lin</href> from the Ohio State University, and <a href="https://cs.uwaterloo.ca/~yaafer/">Professor. Yousra Aafer</href> from the University of Waterloo</a> .
 
-<a>I am sincerely grateful for the mentorship they have provided!!!!!😊</a>
+I am sincerely grateful for the mentorship they have provided!!!!!😊
 
 <h2>Research Interests</h2>
 I am currently immersed in research focusing on the convergence of security and privacy within the realm of IoT and mobile devices. My exploration delves into the potential repercussions of vulnerabilities present in various smart devices, illustrating how they can significantly compromise real-life privacy. This encompasses an array of concerns, such as weak authentication mechanisms and inadvertent privacy breaches, spanning from smart homes and healthcare devices to wireless routers.

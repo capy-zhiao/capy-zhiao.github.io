@@ -19,21 +19,21 @@ redirect_from:
 
 # 🐣 about-me
 
-Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from <a href="https://www.scu.edu.cn/">Sichuan University</a> on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the <a href="http://www.is.cas.cn/">Intelligence Engineering Lab at the Institute of Software, Chinese Academy of Sciences (ISCAS)</a>. After that, I am working with Prof.Zhiqiang Lin from<a href="https://www.osu.edu/">The Ohio State University</a> .
+Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from <a href="https://www.scu.edu.cn/">Sichuan University</a> on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the <a href="http://www.is.cas.cn/">Intelligence Engineering Lab at the Institute of Software, Chinese Academy of Sciences (ISCAS)</a>. Currently, I am working with <a href="https://web.cse.ohio-state.edu/~lin.3021/">Professor.Zhiqiang Lin from the Ohio State University, and <a href="https://cs.uwaterloo.ca/~yaafer/">Professor. Yousra Aafer from the University of Waterloo</a> .
 
-<h2>Ph.D. Aspirations</h2>
-  <a style="color:red; text-decoration:none;">I'm actively seeking a Ph.D. position for Fall 2024, and I'm committed to making projects that integrate with real-world security and privacy!</a>
+<a>I am sincerely grateful for the mentorship they have provided!!!!!😊</a>
 
 <h2>Research Interests</h2>
 I am currently immersed in research focusing on the convergence of security and privacy within the realm of IoT and mobile devices. My exploration delves into the potential repercussions of vulnerabilities present in various smart devices, illustrating how they can significantly compromise real-life privacy. This encompasses an array of concerns, such as weak authentication mechanisms and inadvertent privacy breaches, spanning from smart homes and healthcare devices to wireless routers.
 
 In the long term, my research aspirations center around the consistent enhancement of privacy-conscious security measures for both IoT and mobile devices. I maintain a strong conviction that the amalgamation of smart devices and research emphasizing privacy can wield a substantial and lasting impact.
 
-Now, my research skills are mainly in these areas:
-  <ul>
-      <li><b>Binary security</b>: Binary program analysis, IoT Security, Software security.</li>
-      <li><b>Cyber  security</b>: Penetration, Privacy protection.</li>
-  </ul>
+Now, my research interests are mainly but not limited in these areas:
+<ol>
+  <li><b>Security and privacy for smartphone users:</b> Developing security and privacy technologies that allow smartphone users to use mobile apps in a secure and privacy-protecting way.</li>
+  <li><b>Security and privacy for smart device users:</b> How can we construct security and privacy technologies to effectively prevent the leakage of users’ private data?</li>
+  <li><b>Unauthorized Access:</b> How can we prevent unauthorized access in a multi-device environment, ensuring each user adheres to their access privileges? </li>
+</ol>
 
 # 🔥 News
 - *2023.08.09*: &nbsp;🎉🎉 My personal website was established today! 
@@ -47,12 +47,6 @@ Now, my research skills are mainly in these areas:
   </ul>
 
 
-<h2>Software copyright</h2>
-  <ul>
-      <li>2022, Java Fuzz Testing Platform based on Structured Mutation Method</li>
-      <li>2022, Java Fuzz Testing Platform based on Sensitivity Function Priority Coverage-guided Strategy</li>
-      <li>2020, Intelligent Sensitive Information Discovery and Monitoring Platform</li>
-  </ul>
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -72,11 +66,11 @@ Now, my research skills are mainly in these areas:
 - *2021.07*, <b>3th</b>, The Final of the 4th National College Students' Computer Skill Application Contest. 
 - *2021.04*, <b>H</b>, American Mathematical Contest in Modeling for College Students. 
 - *2020.10*, <b>1th</b>, The Sichuan University First Prize Scholarship. 
-- *2020.06*, The 17th National College Students' Security and Confrontation Technology Contest. 
-- *2020.05*, <b>2th</b>, The Sichuan University Network Space Security Skill Competition for College Students. 
+- *2020.06*, <b>3th</b>, The 17th National College Students' Security and Confrontation Technology Contest. 
+- *2019.05*, <b>2th</b>, The Sichuan University Network Space Security Skill Competition for College Students. 
 
 # 📖 Educations
-- *2019.09 - 2023.06*, Undergraduate, Sichuan University. 
+- *2019.09 - 2023.06*, Bachelor of Engineering in Cybersecurity, Sichuan University. 
 
 <!-- # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 

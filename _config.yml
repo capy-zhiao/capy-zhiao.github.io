@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Zhiao Wei"
-description              : " a teenager who wants to be a hacker!👻"
+description              : "Toda mi ambición es ser libre toda mi vida."
 repository               : "capy-zhiao/capy-zhiao.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Zhiao Wei"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Undergrad student at Sichuan University"
+  bio              : "grad student at Sichuan University"
   location         : "SiChuan, China"
   employer         :
   pubmed           : 
@@ -49,7 +49,7 @@ author:
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
+  steam            : "https://steamcommunity.com/id/Manjushagesnus/"
   tumblr           :
   twitter          : 
   vine             :

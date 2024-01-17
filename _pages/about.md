@@ -66,7 +66,7 @@ Now, my research interests are mainly but not limited in these areas:
 - *2021.07*, <b>3th</b>, The Final of the 4th National College Students' Computer Skill Application Contest. 
 - *2021.04*, <b>H</b>, American Mathematical Contest in Modeling for College Students. 
 - *2020.10*, <b>1th</b>, The Sichuan University First Prize Scholarship. 
-- *2020.06*, <b>3th</b>, The 17th National College Students' Security and Confrontation Technology Contest. 
+- *2020.06*, <b>1th</b>, The 17th National College Students' Security and Confrontation Technology Contest. 
 - *2019.05*, <b>2th</b>, The Sichuan University Network Space Security Skill Competition for College Students. 
 
 # 📖 Educations

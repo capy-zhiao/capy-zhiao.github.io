@@ -19,7 +19,7 @@ redirect_from:
 
 # 🐣 about-me
 
-Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from <a href="https://www.scu.edu.cn/">Sichuan University</a> on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the <a href="http://www.is.cas.cn/">Intelligence Engineering Lab at the Institute of Software, Chinese Academy of Sciences (ISCAS)</a>. Currently, I am working with <a href="https://web.cse.ohio-state.edu/~lin.3021/">Professor.Zhiqiang Lin</a> from the Ohio State University, and <a href="https://cs.uwaterloo.ca/~yaafer/">Professor.Yousra Aafer</a> from the University of Waterloo. Also, I have a project with <a href="https://cs.ucr.edu/~ztan/">Professor.Zhaowei Tan</a> from the University of California, Riverside.
+.
 
 I am sincerely grateful for the mentorship they have provided!!!!!😊
 

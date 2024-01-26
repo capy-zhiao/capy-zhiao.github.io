@@ -19,7 +19,7 @@ redirect_from:
 
 # 🐣 about-me
 
-.
+Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from Sichuan University on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the . Currently, I am working with ...
 
 I am sincerely grateful for the mentorship they have provided!!!!!😊
 
@@ -109,8 +109,6 @@ lots of cute pics here!
 
 <img src="https://uranusky.s3.us-west-004.backblazeb2.com/pet/1691585421571.jpeg" class="fixed-height floating-image">
 <img src="https://uranusky.s3.us-west-004.backblazeb2.com/pet/qq_pic_merged_1691585652930.jpg" class="fixed-height floating-image">
-<img src="https://uranusky.s3.us-west-004.backblazeb2.com/pet/1691585439350.jpeg" class="fixed-height floating-image">
-
 
 
 <h2>Capybara</h2>

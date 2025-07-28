@@ -19,9 +19,9 @@ redirect_from:
 
 # 🐣 about-me
 
-Hi, I'm Zhiao Wei, I have just obtained the degree of Bachelor of Engineering in Cybersecurity from Sichuan University on 20 June 2023. Before I graduate, I have been actively involved in research during my time at the . Currently, I am working with ...
+Hi, I'm Zhiao Wei. I obtained my Bachelor of Engineering degree in Cybersecurity from Sichuan University on June 20, 2023. During my undergraduate studies, I was actively involved in research, which sparked my passion for security and systems work.
 
-I am sincerely grateful for the mentorship they have provided!!!!!😊
+Currently, I’m pursuing a Master of Mathematics (MMath) in Computer Science at the University of Waterloo, where I’m fortunate to be working under the supervision of Professor Yousra Aafer. I’m truly grateful for her mentorship and guidance—it has been invaluable to my growth as a researcher and builder! 😊
 
 <h2>Research Interests</h2>
 I am currently immersed in research focusing on the convergence of security and privacy within the realm of IoT and mobile devices. My exploration delves into the potential repercussions of vulnerabilities present in various smart devices, illustrating how they can significantly compromise real-life privacy. This encompasses an array of concerns, such as weak authentication mechanisms and inadvertent privacy breaches, spanning from smart homes and healthcare devices to wireless routers.

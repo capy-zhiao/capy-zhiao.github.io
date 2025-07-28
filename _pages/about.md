@@ -81,7 +81,7 @@ Now, my research interests are mainly but not limited in these areas:
 
 # 🐹 Miscellaneous
 <h2>Website</h2>
-This is my personal blog: <a href="https://www.uranusky.top">uranusky.top</a>~ I usually post study notes and some interesting stuff 0v0! 
+This is my personal blog: <a href="https://capy-penetration.gitbook.io/penetration">capy-penetration.gitbook.io</a>~ I usually post study notes and some interesting stuff 0v0! 
 
 <h2>Guitar</h2>
 In my free time, I'll be playing my guitar on <a href="https://space.bilibili.com/20591488">bilibili</a>, so welcome to enjoy😊!

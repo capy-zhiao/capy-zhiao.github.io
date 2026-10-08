@@ -1,0 +1,108 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Job Monitor | Zhiao Wei </title> <meta name="author" content="Zhiao Wei"> <meta name="description" content="Monitors 106 career feeds every 15 minutes and publishes matching openings to a live dashboard and Discord."> <meta name="keywords" content="Zhiao Wei, University of Waterloo, computer security, mini-program, mobile security"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%90%B9&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://capy-zhiao.github.io/projects/job_monitor/"> <script src="/assets/js/theme.js?v=4b023ff413aa9d551c5e39ed7e10b063"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zhiao</span> Wei </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Job Monitor</h1> <p class="post-description">Monitors 106 career feeds every 15 minutes and publishes matching openings to a live dashboard and Discord.</p> </header> <article> <p><a href="https://capy-zhiao.github.io/Job_Monitor/">Live dashboard</a> · <a href="https://github.com/capy-zhiao/Job_Monitor" rel="external nofollow noopener" target="_blank">Code on GitHub</a> · Solo project, running since July 2026</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/job_monitor-480.webp 480w,/assets/img/projects/job_monitor-800.webp 800w,/assets/img/projects/job_monitor-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/job_monitor.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Job Monitor dashboard" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption">The live dashboard: search and filters on the left, open roles over time, newest postings first.</div> <h3 id="the-problem">The problem</h3> <p>New-grad postings are spread across many company career sites, and those sites run on many different applicant tracking systems (Greenhouse, Workday, Ashby, Lever, Oracle, SuccessFactors and more), each with its own API. Checking them by hand means missing postings or finding them days late.</p> <h3 id="what-i-built">What I built</h3> <ul> <li>A Python pipeline with <strong>21 platform adapters</strong> behind one fetcher interface, covering <strong>106 sources</strong>. Several adapters call undocumented endpoints that I reverse-engineered from the career sites themselves, such as Google’s <code class="language-plaintext highlighter-rouge">batchexecute</code> RPC. It uses only the Python standard library.</li> <li>A scheduled job on <strong>GitHub Actions</strong> that runs every 15 minutes: fetch every source, keep postings that match the title keywords and locations, drop duplicates, send new ones to Discord, and commit the updated state back to the repository.</li> <li>A static <a href="https://capy-zhiao.github.io/Job_Monitor/">dashboard</a> in plain JavaScript: search plus filters for role, country, city, company, work type and posting age. The filters are stored in the URL, so a filtered view can be shared as a link.</li> </ul> <h3 id="design-decisions">Design decisions</h3> <ul> <li> <strong>No server.</strong> State lives in a JSON file that each run commits back to the repository. That costs nothing and keeps a full history of every change. The trade-off is timing: GitHub can delay scheduled runs. A concurrency group makes runs queue instead of overlapping, so two runs never write the state file at once.</li> <li> <strong>One broken source never stops a run.</strong> Each request has a timeout and each source runs in its own error handler, with every failure logged. A run only fails when nothing at all comes back. The weakness of this rule is that a source that slowly stops returning results can go unnoticed; the next step is to alert when a source keeps failing or comes back empty across several runs.</li> <li> <strong>Duplicates.</strong> The same posting can appear through several sources, or twice when a Workday listing pages through its results. Postings are deduplicated on a stable ID, and the set of seen IDs only grows, so a posting that disappears and comes back does not trigger a second alert.</li> </ul> <h3 id="how-i-checked-it">How I checked it</h3> <ul> <li>An offline <code class="language-plaintext highlighter-rouge">unittest</code> suite with mocked HTTP responses for the adapters, plus checks that the source configuration is valid. CI runs it on Python 3.8, 3.12 and 3.13.</li> <li>As of October 2026 the scheduled job has completed <strong>1,280+ successful runs</strong> and tracked <strong>860+ unique postings</strong>.</li> </ul> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Zhiao Wei. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "projects",
+          description: "Software I built and run. Each page covers the problem, my part, the main design decisions, and how I checked that it works.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "* denotes equal contribution.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "projects-codemind",
+          title: 'CodeMind',
+          description: "Hack the North 2025 prototype, team of three. I built the backend that saves AI coding conversations as structured records.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/codemind/";
+            },},{id: "projects-job-monitor",
+          title: 'Job Monitor',
+          description: "Monitors 106 career feeds every 15 minutes and publishes matching openings to a live dashboard and Discord.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/job_monitor/";
+            },},{id: "projects-leetcode-tracker",
+          title: 'LeetCode Tracker',
+          description: "A full-stack spaced-repetition app for 272 interview problems, with a FastAPI backend, a React frontend, and 200+ tests.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/leetcode_tracker/";
+            },},{id: "projects-permscope",
+          title: 'PermScope',
+          description: "Finds mini-program APIs in WeChat, QQ, Alipay and Baidu that skip permission checks. Found 183 such APIs; published at USENIX Security &#39;26.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/permscope/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%7A%68%69%61%6F.%77%65%69@%75%77%61%74%65%72%6C%6F%6F.%63%61", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/capy-zhiao", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

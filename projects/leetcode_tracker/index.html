@@ -1,0 +1,108 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> LeetCode Tracker | Zhiao Wei </title> <meta name="author" content="Zhiao Wei"> <meta name="description" content="A full-stack spaced-repetition app for 272 interview problems, with a FastAPI backend, a React frontend, and 200+ tests."> <meta name="keywords" content="Zhiao Wei, University of Waterloo, computer security, mini-program, mobile security"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%90%B9&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://capy-zhiao.github.io/projects/leetcode_tracker/"> <script src="/assets/js/theme.js?v=4b023ff413aa9d551c5e39ed7e10b063"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zhiao</span> Wei </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">LeetCode Tracker</h1> <p class="post-description">A full-stack spaced-repetition app for 272 interview problems, with a FastAPI backend, a React frontend, and 200+ tests.</p> </header> <article> <p><a href="https://github.com/capy-zhiao/leetcode-tracker" rel="external nofollow noopener" target="_blank">Code on GitHub</a> · Solo project, built with Claude Code · No public demo; it runs locally</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/leetcode_tracker-480.webp 480w,/assets/img/projects/leetcode_tracker-800.webp 800w,/assets/img/projects/leetcode_tracker-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/leetcode_tracker.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="LeetCode Tracker daily queue" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption">The daily queue: reviews ranked by priority, new problems, and one template drill.</div> <h3 id="the-problem">The problem</h3> <p>I was preparing for interviews with a study plan written in markdown. It stopped working past a hundred or so problems: I could not keep that many review dates in my head, and when many problems came due on the same day there was no good way to pick the few that mattered.</p> <h3 id="what-i-built">What I built</h3> <ul> <li>A <strong>React + TypeScript</strong> frontend and a <strong>FastAPI + SQLAlchemy 2.0 + Pydantic v2</strong> backend with 22 REST endpoints. It uses SQLite locally; setting <code class="language-plaintext highlighter-rouge">DATABASE_URL</code> switches it to PostgreSQL.</li> <li>It covers <strong>272 problems</strong> from NeetCode 150, Top Interview 150 and LeetCode 75 (the lists overlap).</li> <li>Spaced-repetition scheduling. Each attempt is graded from what actually happened (time taken, whether there were bugs, whether I looked at the solution) instead of how I felt about it, and the next review date follows from that grade.</li> <li>A mock interview mode: a random problem, a countdown, and then follow-up questions about the code I just wrote, which an LLM grades.</li> <li>Drills where I write one of 15 algorithm templates from memory, and a required time and space complexity answer on every attempt, checked against reference answers for 247 of the 272 problems.</li> </ul> <h3 id="design-decisions">Design decisions</h3> <ul> <li> <strong>A day has a fixed number of slots.</strong> When more reviews are due than fit in a day, they are ranked by days overdue, past failures, difficulty and chapter. The first pass gives each chapter and each pattern at most two slots, so a day stays mixed when it can; if that leaves slots empty, the limit is relaxed and the highest-priority skipped problems fill them.</li> <li> <strong>The rules are kept apart from the database.</strong> The spaced-repetition rules and the template grader never touch the database, and the date can be passed in explicitly, so each rule can be tested on its own with a fixed day. The layer that builds the daily queue reads the database and also takes the date as a parameter.</li> <li> <strong>Templates are graded by checkpoints, not text similarity.</strong> Each template lists the lines that make it correct, and a drill passes only when all of them are present. Similarity to the reference is shown as a soft signal and never passes a drill on its own, because code can read like the template and still miss the one line that matters. A test checks that every reference solution passes its own checkpoints.</li> <li> <strong>The LLM layer does not depend on one provider.</strong> Claude uses structured outputs; DeepSeek uses JSON mode with Pydantic validation. A failed provider call returns nothing instead of raising. Without a configured provider, the AI features are switched off with a clear message and the rest of the app works as usual. The AI complexity check is a separate request from saving an attempt, because a reasoning-model reply can take tens of seconds and should not hold up saving.</li> </ul> <h3 id="how-i-checked-it">How I checked it</h3> <ul> <li> <strong>204 pytest tests</strong>, including the scheduling rules, complexity grading and the API.</li> <li>CI on every push to <code class="language-plaintext highlighter-rouge">main</code> and every pull request runs the backend tests, a type-check and production build of the frontend, and a check that the problem set is complete and tagged.</li> <li>I built it with Claude Code and used the test suite and CI to check the generated code.</li> </ul> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Zhiao Wei. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "projects",
+          description: "Software I built and run. Each page covers the problem, my part, the main design decisions, and how I checked that it works.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "* denotes equal contribution.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "projects-codemind",
+          title: 'CodeMind',
+          description: "Hack the North 2025 prototype, team of three. I built the backend that saves AI coding conversations as structured records.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/codemind/";
+            },},{id: "projects-job-monitor",
+          title: 'Job Monitor',
+          description: "Monitors 106 career feeds every 15 minutes and publishes matching openings to a live dashboard and Discord.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/job_monitor/";
+            },},{id: "projects-leetcode-tracker",
+          title: 'LeetCode Tracker',
+          description: "A full-stack spaced-repetition app for 272 interview problems, with a FastAPI backend, a React frontend, and 200+ tests.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/leetcode_tracker/";
+            },},{id: "projects-permscope",
+          title: 'PermScope',
+          description: "Finds mini-program APIs in WeChat, QQ, Alipay and Baidu that skip permission checks. Found 183 such APIs; published at USENIX Security &#39;26.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/permscope/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%7A%68%69%61%6F.%77%65%69@%75%77%61%74%65%72%6C%6F%6F.%63%61", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/capy-zhiao", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

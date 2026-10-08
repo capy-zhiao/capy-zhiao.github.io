@@ -21,15 +21,23 @@
     margin-bottom: 1.75rem;
     border-left: 4px solid var(--global-divider-color);
   }
+  /* Logos are wide wordmarks, so the slot is wide; the white tile keeps
+     dark-text logos readable in dark mode. */
   .timeline-logo {
-    flex: 0 0 64px;
-    width: 64px;
-    height: 64px;
+    flex: 0 0 150px;
+    width: 150px;
   }
   .timeline-logo img {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    border-radius: 6px;
+    background: #fff;
+  }
+  .timeline-logo-badge {
+    flex-basis: 64px;
+    width: 64px;
+    height: 64px;
   }
   .timeline-badge {
     display: flex;
@@ -99,12 +107,17 @@
     margin-bottom: 0;
   }
   @media (max-width: 575.98px) {
+    /* Phones: logo above the text, so the text keeps the full width. */
     .timeline-entry {
-      gap: 0.9rem;
+      flex-direction: column;
+      gap: 0.6rem;
       padding-left: 0.9rem;
     }
     .timeline-logo {
-      flex-basis: 44px;
+      flex-basis: auto;
+      width: 130px;
+    }
+    .timeline-logo-badge {
       width: 44px;
       height: 44px;
     }
@@ -113,7 +126,7 @@
       border-radius: 6px;
     }
   }
-</style> <h2>experience</h2> <div class="timeline"> <div class="timeline-entry"> <div class="timeline-logo"> <div class="timeline-badge" aria-hidden="true">UW</div> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="https://crysp.uwaterloo.ca/" rel="external nofollow noopener" target="_blank">CrySP Lab, University of Waterloo</a></span> <span class="timeline-location">Waterloo, Canada</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Graduate Researcher</span> <span class="timeline-date">May 2025 – Present</span> </div> </div> </div> <div class="timeline-entry"> <div class="timeline-logo"> <div class="timeline-badge" aria-hidden="true">ISCAS</div> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="http://www.iscas.ac.cn/" rel="external nofollow noopener" target="_blank">Institute of Software, Chinese Academy of Sciences (ISCAS)</a></span> <span class="timeline-location">Beijing, China</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">System Security Intern</span> <span class="timeline-date">2021 – 2022</span> </div> </div> </div> </div> <h2>education</h2> <div class="timeline"> <div class="timeline-entry"> <div class="timeline-logo"> <div class="timeline-badge" aria-hidden="true">UW</div> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="https://uwaterloo.ca/" rel="external nofollow noopener" target="_blank">University of Waterloo</a></span> <span class="timeline-location">Waterloo, Canada</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Master of Mathematics (MMath) in Computer Science</span> <span class="timeline-date">May 2025 – Apr 2027 (Expected)</span> </div> </div> </div> </div> <h2> <a href="/projects/" style="color: inherit">selected projects</a> </h2> <style>
+</style> <h2>experience</h2> <div class="timeline"> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/uwaterloo.png" alt="CrySP Lab, University of Waterloo logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="https://crysp.uwaterloo.ca/" rel="external nofollow noopener" target="_blank">CrySP Lab, University of Waterloo</a></span> <span class="timeline-location">Waterloo, Canada</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Graduate Researcher</span> <span class="timeline-date">May 2025 – Present</span> </div> </div> </div> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/iscas.png" alt="Institute of Software, Chinese Academy of Sciences (ISCAS) logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="http://www.iscas.ac.cn/" rel="external nofollow noopener" target="_blank">Institute of Software, Chinese Academy of Sciences (ISCAS)</a></span> <span class="timeline-location">Beijing, China</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">System Security Intern</span> <span class="timeline-date">2021 – 2022</span> </div> </div> </div> </div> <h2>education</h2> <div class="timeline"> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/uwaterloo.png" alt="University of Waterloo logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="https://uwaterloo.ca/" rel="external nofollow noopener" target="_blank">University of Waterloo</a></span> <span class="timeline-location">Waterloo, Canada</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Master of Mathematics (MMath) in Computer Science</span> <span class="timeline-date">May 2025 – Apr 2027 (Expected)</span> </div> </div> </div> </div> <h2> <a href="/projects/" style="color: inherit">selected projects</a> </h2> <style>
   .projects .card { position: relative; }
   .projects .card .stretched-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
   .projects .card .github-icon { position: relative; z-index: 2; }

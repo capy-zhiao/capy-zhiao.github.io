@@ -7,6 +7,9 @@ Built with [Jekyll](https://jekyllrb.com/) and the [al-folio](https://github.com
 ## Editing
 
 - **Bio / profile** — `_pages/about.md` (profile photo: `assets/img/prof_pic.jpg`)
+- **Experience / education** — `_data/experience.yml` and `_data/education.yml`
+  (newest first). For a logo, put the image in `assets/img/logos/` and set
+  `logo: <file name>` on the entry; without one, the `short` name is shown in a badge.
 - **Publications** — `_bibliography/papers.bib` (rendered on `_pages/publications.md`)
 - **Social links** — `_data/socials.yml`
 - **Site settings** — `_config.yml`

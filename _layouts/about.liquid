@@ -98,6 +98,21 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- Experience and education (entries in _data/experience.yml and _data/education.yml) -->
+    {% if page.experience or page.education %}
+      {% include timeline_styles.liquid %}
+    {% endif %}
+
+    {% if page.experience and site.data.experience %}
+      <h2>experience</h2>
+      {% include timeline.liquid entries=site.data.experience %}
+    {% endif %}
+
+    {% if page.education and site.data.education %}
+      <h2>education</h2>
+      {% include timeline.liquid entries=site.data.education %}
+    {% endif %}
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">

@@ -1,0 +1,33 @@
+# Experience entries on the homepage, newest first (rendered by _includes/timeline.liquid).
+#
+#   org       organization name; linked when `url` is set
+#   logo      optional file in assets/img/logos/; without one, `short` is shown in a badge
+#   short     2-5 letter fallback for the logo badge
+#   role      position title
+#   date      free text, e.g. "Sep 2023 – Present"
+#   summary   optional paragraph (Markdown)
+
+- org: CrySP Lab, University of Waterloo
+  url: https://crysp.uwaterloo.ca/
+  logo:
+  short: UW
+  location: Waterloo, Canada
+  role: Graduate Researcher
+  date: Sep 2023 – Present
+  summary: >
+    Mobile and super-app security research with Prof. Yousra Aafer.
+    Co-first author of PermScope (USENIX Security ’26): I built its dynamic analysis on Xposed,
+    which hooks the super-app's JavaScript bridge and Android system services,
+    and its LLM-driven test generation pipeline.
+    PermScope tested 2,067 mini-program APIs across WeChat, QQ, Alipay and Baidu
+    and found 183 that skip permission checks.
+    Also characterizing permission scopes in super apps (ACM SaTS ’26).
+
+- org: Institute of Software, Chinese Academy of Sciences (ISCAS)
+  url: http://www.iscas.ac.cn/
+  logo:
+  short: ISCAS
+  location: Beijing, China
+  role: System Security Intern
+  date: 2021 – 2022
+  summary:

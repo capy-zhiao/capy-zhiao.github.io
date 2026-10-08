@@ -1,0 +1,45 @@
+{%- comment -%}
+  Experience / education entries: logo on the left, then organization and
+  location, role and dates, optional course tags and a summary.
+  Usage: {% include timeline.liquid entries=site.data.experience %}
+  Styles live in timeline_styles.liquid; include that once per page.
+{%- endcomment -%}
+<div class="timeline">
+  {% for entry in include.entries %}
+    <div class="timeline-entry">
+      <div class="timeline-logo">
+        {% if entry.logo %}
+          <img src="{{ entry.logo | prepend: 'assets/img/logos/' | relative_url }}" alt="{{ entry.org }} logo" loading="lazy">
+        {% else %}
+          <div class="timeline-badge" aria-hidden="true">{{ entry.short }}</div>
+        {% endif %}
+      </div>
+      <div class="timeline-body">
+        <div class="timeline-row">
+          <span class="timeline-org">
+            {%- if entry.url -%}
+              <a href="{{ entry.url }}">{{ entry.org }}</a>
+            {%- else -%}
+              {{ entry.org }}
+            {%- endif -%}
+          </span>
+          <span class="timeline-location">{{ entry.location }}</span>
+        </div>
+        <div class="timeline-row timeline-role-row">
+          <span class="timeline-role">{{ entry.role }}</span>
+          <span class="timeline-date">{{ entry.date }}</span>
+        </div>
+        {% if entry.courses and entry.courses.size > 0 %}
+          <div class="timeline-tags">
+            {% for course in entry.courses %}
+              <span class="timeline-tag">{{ course }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if entry.summary %}
+          <div class="timeline-summary">{{ entry.summary | markdownify }}</div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

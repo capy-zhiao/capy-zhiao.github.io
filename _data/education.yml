@@ -1,0 +1,27 @@
+# Education entries on the homepage, newest first (rendered by _includes/timeline.liquid).
+# Same fields as _data/experience.yml, plus:
+#
+#   courses   optional list, shown as tags
+
+- org: University of Waterloo
+  url: https://uwaterloo.ca/
+  logo:
+  short: UW
+  location: Waterloo, Canada
+  role: Master of Mathematics (MMath) in Computer Science
+  date: Sep 2023 – Present
+  courses:
+  summary: >
+    Supervised by Prof. [Yousra Aafer](https://cs.uwaterloo.ca/~yaafer/).
+    Research on mobile and super-app security.
+
+- org: Sichuan University
+  url: https://www.scu.edu.cn/
+  logo:
+  short: SCU
+  location: Chengdu, China
+  role: Bachelor of Engineering in Cybersecurity
+  date: Sep 2019 – Jun 2023
+  courses:
+  summary: >
+    First Prize Scholarship (2020).

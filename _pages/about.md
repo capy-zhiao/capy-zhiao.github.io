@@ -12,6 +12,8 @@ profile:
 
 selected_projects: true # featured project cards (see _layouts/about.liquid)
 selected_papers: true # includes a list of papers marked as "selected={true}"
+experience: true # entries from _data/experience.yml
+education: true # entries from _data/education.yml
 social: true # includes social icons at the bottom of the page
 
 announcements:

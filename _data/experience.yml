@@ -14,14 +14,6 @@
   location: Waterloo, Canada
   role: Graduate Researcher
   date: Sep 2023 – Present
-  summary: >
-    Mobile and super-app security research with Prof. Yousra Aafer.
-    Co-first author of PermScope (USENIX Security ’26): I built its dynamic analysis on Xposed,
-    which hooks the super-app's JavaScript bridge and Android system services,
-    and its LLM-driven test generation pipeline.
-    PermScope tested 2,067 mini-program APIs across WeChat, QQ, Alipay and Baidu
-    and found 183 that skip permission checks.
-    Also characterizing permission scopes in super apps (ACM SaTS ’26).
 
 - org: Institute of Software, Chinese Academy of Sciences (ISCAS)
   url: http://www.iscas.ac.cn/
@@ -30,4 +22,3 @@
   location: Beijing, China
   role: System Security Intern
   date: 2021 – 2022
-  summary:

@@ -7,7 +7,7 @@
 <div class="timeline">
   {% for entry in include.entries %}
     <div class="timeline-entry">
-      <div class="timeline-logo">
+      <div class="timeline-logo{% unless entry.logo %} timeline-logo-badge{% endunless %}">
         {% if entry.logo %}
           <img src="{{ entry.logo | prepend: 'assets/img/logos/' | relative_url }}" alt="{{ entry.org }} logo" loading="lazy">
         {% else %}

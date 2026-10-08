@@ -9,7 +9,7 @@
 
 - org: CrySP Lab, University of Waterloo
   url: https://crysp.uwaterloo.ca/
-  logo:
+  logo: uwaterloo.png
   short: UW
   location: Waterloo, Canada
   role: Graduate Researcher
@@ -17,7 +17,7 @@
 
 - org: Institute of Software, Chinese Academy of Sciences (ISCAS)
   url: http://www.iscas.ac.cn/
-  logo:
+  logo: iscas.png
   short: ISCAS
   location: Beijing, China
   role: System Security Intern

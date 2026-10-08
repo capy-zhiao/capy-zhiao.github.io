@@ -23,7 +23,3 @@ Conversations with AI coding assistants contain decisions and code changes that 
 - A Python **Model Context Protocol (MCP)** server that Claude Desktop can call to save the current conversation as a **Pydantic**-typed record in local JSON storage.
 - An analysis step that sends the conversation to **GPT-4** with a fixed JSON format to fill in: the type of change (one of six), a title, a summary, and the code before and after the change. If that call fails, a default record is saved instead, so the conversation itself is never lost.
 - A **Flask** JSON API that the team's dashboard reads from. It tags each record with the kind of code change (functions, classes, API or database code) using pattern matching.
-
-### Current status
-
-The analysis call was written against the pre-1.0 interface of the OpenAI Python SDK (`openai.ChatCompletion`), but the project now pins SDK 1.x, where that interface no longer exists. With the pinned dependencies the call fails, so every conversation is saved with the default record. Moving the call to the 1.x client is a small change that has not been made yet.

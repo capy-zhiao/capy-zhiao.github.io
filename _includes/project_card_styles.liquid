@@ -1,0 +1,20 @@
+{%- comment -%}
+  Makes the whole project card clickable through the title link (see
+  projects.liquid). The theme's Bootstrap compatibility layer has no
+  .stretched-link, so the rule lives here. The GitHub link sits above the
+  stretched area so it stays separately clickable.
+{%- endcomment -%}
+<style>
+  .projects .card { position: relative; }
+  .projects .card .stretched-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+  .projects .card .github-icon { position: relative; z-index: 2; }
+  /* Wide card (image left, text right). The theme's Bootstrap layer has no
+     col-md-* widths, so the layout is spelled out here. */
+  .projects .card-horizontal-row { display: flex; flex-wrap: wrap; }
+  .projects .card-horizontal-img { flex: 0 0 40%; max-width: 40%; }
+  .projects .card-horizontal-img img { width: 100%; height: 100%; object-fit: cover; }
+  .projects .card-horizontal-body { flex: 1 1 0; min-width: 0; }
+  @media (max-width: 767px) {
+    .projects .card-horizontal-img, .projects .card-horizontal-body { flex-basis: 100%; max-width: 100%; }
+  }
+</style>

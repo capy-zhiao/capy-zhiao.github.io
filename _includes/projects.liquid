@@ -1,0 +1,38 @@
+{%- comment -%}
+  Local override of al_folio_core's projects.liquid. The theme wraps the whole card in
+  one link and puts the GitHub link inside it, which nests anchors: browsers split that
+  into several empty links, and the icon link has no name. Here the title is the card
+  link (stretched over the card), and the code link sits above it with its own label.
+{%- endcomment -%}
+{% capture project_href %}{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}{% endcapture %}
+<div class="col">
+  <div class="card h-100 hoverable">
+    {% if project.img %}
+      {%
+        include figure.liquid
+        loading="eager"
+        path=project.img
+        sizes = "250px"
+        alt=""
+        class="card-img-top"
+      %}
+    {% endif %}
+    <div class="card-body">
+      <h2 class="card-title">
+        <a href="{{ project_href }}" class="stretched-link" style="color: inherit">{{ project.title }}</a>
+      </h2>
+      <p class="card-text">{{ project.description }}</p>
+      {% if project.github %}
+        <div class="github-icon">
+          <a
+            href="{{ project.github }}"
+            aria-label="View {{ project.title }} source on GitHub"
+            title="View {{ project.title }} source on GitHub"
+          >
+            <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

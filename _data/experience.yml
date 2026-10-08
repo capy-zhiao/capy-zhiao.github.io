@@ -4,7 +4,7 @@
 #   logo      optional file in assets/img/logos/; without one, `short` is shown in a badge
 #   short     2-5 letter fallback for the logo badge
 #   role      position title
-#   date      free text, e.g. "Sep 2023 – Present"
+#   date      free text, e.g. "May 2025 – Present"
 #   summary   optional paragraph (Markdown)
 
 - org: CrySP Lab, University of Waterloo
@@ -13,7 +13,7 @@
   short: UW
   location: Waterloo, Canada
   role: Graduate Researcher
-  date: Sep 2023 – Present
+  date: May 2025 – Present
 
 - org: Institute of Software, Chinese Academy of Sciences (ISCAS)
   url: http://www.iscas.ac.cn/

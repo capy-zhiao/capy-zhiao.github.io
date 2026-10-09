@@ -16,25 +16,25 @@ github: https://github.com/capy-zhiao/leetcode-tracker
 
 ### The problem
 
-I was preparing for interviews with a study plan written in markdown. It stopped working past a hundred or so problems: I could not keep that many review dates in my head, and when many problems came due on the same day there was no good way to pick the few that mattered.
+I was preparing for interviews with a study plan in markdown. Past about a hundred problems, I could no longer keep track of review dates, or pick the few that mattered on days when many came due.
 
 ### What I built
 
-- A **React + TypeScript** frontend and a **FastAPI + SQLAlchemy 2.0 + Pydantic v2** backend with 22 REST endpoints. It uses SQLite locally; setting `DATABASE_URL` switches it to PostgreSQL.
-- It covers **272 problems** from NeetCode 150, Top Interview 150 and LeetCode 75 (the lists overlap).
-- Spaced-repetition scheduling. Each attempt is graded from what actually happened (time taken, whether there were bugs, whether I looked at the solution) instead of how I felt about it, and the next review date follows from that grade.
-- A mock interview mode: a random problem, a countdown, and then follow-up questions about the code I just wrote, which an LLM grades.
-- Drills where I write one of 15 algorithm templates from memory, and a required time and space complexity answer on every attempt, checked against reference answers for 247 of the 272 problems.
+- A **React + TypeScript** frontend and a **FastAPI** backend (SQLAlchemy 2.0, Pydantic v2, 22 REST endpoints) on SQLite, or PostgreSQL by setting `DATABASE_URL`.
+- **272 problems** from NeetCode 150, Top Interview 150 and LeetCode 75 (the lists overlap).
+- Spaced repetition: each attempt is graded from what actually happened (time taken, bugs, whether I looked at the solution), and the grade sets the next review date.
+- A mock interview mode with a countdown and LLM-graded follow-up questions about the code I just wrote.
+- Drills for writing 15 algorithm templates from memory, and a required complexity answer on every attempt, checked against reference answers for 247 problems.
 
 ### Design decisions
 
-- **A day has a fixed number of slots.** When more reviews are due than fit in a day, they are ranked by days overdue, past failures, difficulty and chapter. The first pass gives each chapter and each pattern at most two slots, so a day stays mixed when it can; if that leaves slots empty, the limit is relaxed and the highest-priority skipped problems fill them.
-- **The rules are kept apart from the database.** The spaced-repetition rules and the template grader never touch the database, and the date can be passed in explicitly, so each rule can be tested on its own with a fixed day. The layer that builds the daily queue reads the database and also takes the date as a parameter.
-- **Templates are graded by checkpoints, not text similarity.** Each template lists the lines that make it correct, and a drill passes only when all of them are present. Similarity to the reference is shown as a soft signal and never passes a drill on its own, because code can read like the template and still miss the one line that matters. A test checks that every reference solution passes its own checkpoints.
-- **The LLM layer does not depend on one provider.** Claude uses structured outputs; DeepSeek uses JSON mode with Pydantic validation. A failed provider call returns nothing instead of raising. Without a configured provider, the AI features are switched off with a clear message and the rest of the app works as usual. The AI complexity check is a separate request from saving an attempt, because a reasoning-model reply can take tens of seconds and should not hold up saving.
+- **A day has a fixed number of slots.** When more reviews are due than fit, they are ranked by days overdue, past failures, difficulty and chapter. The first pass allows at most two per chapter and per pattern so a day stays mixed; any empty slots are then filled with the highest-priority problems that were skipped.
+- **Rules are kept apart from the database.** The spaced-repetition rules and the template grader never touch the database, and the date can be passed in explicitly, so each rule can be tested on a fixed day.
+- **Templates are graded by checkpoints, not text similarity.** A drill passes only when every required line is present. Similarity is shown but never passes a drill, because code can look like the template and still miss the one line that matters.
+- **The LLM layer works with more than one provider.** Claude uses structured outputs and DeepSeek uses JSON mode with Pydantic validation. Without a provider, the AI features are switched off with a clear message and the rest of the app works.
 
 ### How I checked it
 
-- **204 pytest tests**, including the scheduling rules, complexity grading and the API.
-- CI on every push to `main` and every pull request runs the backend tests, a type-check and production build of the frontend, and a check that the problem set is complete and tagged.
-- I built it with Claude Code and used the test suite and CI to check the generated code.
+- **204 pytest tests** covering the scheduling rules, complexity grading and the API.
+- CI on every push and pull request runs the backend tests, a frontend type-check and build, and a check that the problem set is complete and tagged.
+- I built it with Claude Code and used the tests and CI to check the generated code.

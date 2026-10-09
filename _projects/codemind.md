@@ -12,14 +12,14 @@ category: hackathon
 
 {% include figure.liquid loading="eager" path="assets/img/projects/codemind.png" title="CodeMind dashboard" class="img-fluid rounded z-depth-1" %}
 
-<div class="caption">The team's dashboard during Hack the North (September 2025): saved conversations tagged by type of change, and the summary generated for the selected one.</div>
+<div class="caption">The team's dashboard at Hack the North (September 2025): saved conversations tagged by type of change, with a generated summary.</div>
 
 ### The problem
 
-Conversations with AI coding assistants contain decisions and code changes that are hard to find again once the chat is closed.
+Decisions and code changes made in AI coding chats are hard to find again once the chat is closed.
 
 ### My part: the backend
 
-- A Python **Model Context Protocol (MCP)** server that Claude Desktop can call to save the current conversation as a **Pydantic**-typed record in local JSON storage.
-- An analysis step that sends the conversation to **GPT-4** with a fixed JSON format to fill in: the type of change (one of six), a title, a summary, and the code before and after the change. If that call fails, a default record is saved instead, so the conversation itself is never lost.
-- A **Flask** JSON API that the team's dashboard reads from. It tags each record with the kind of code change (functions, classes, API or database code) using pattern matching.
+- A Python **Model Context Protocol (MCP)** server that Claude Desktop calls to save the current conversation as a **Pydantic**-typed record in local JSON storage.
+- An analysis step that has **GPT-4** fill in a fixed JSON format: the type of change, a title, a summary, and the code before and after. If the call fails, a default record is saved, so the conversation is never lost.
+- A **Flask** API that the team's dashboard reads, tagging each record by the kind of code change (functions, classes, API or database code).

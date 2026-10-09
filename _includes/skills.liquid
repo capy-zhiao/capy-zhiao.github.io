@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: 9rem minmax(0, 1fr);
     column-gap: 1.5rem;
+    align-items: baseline;
     padding: 0.65rem 0;
     border-bottom: 1px solid var(--global-divider-color);
   }
@@ -21,38 +22,45 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    line-height: 1.9;
+    line-height: 1.5;
   }
-  .post .skills-items {
+  /* Each item starts with a separator. The list is shifted left by one
+     separator width and that strip is clipped, so the separator in front of
+     the first item on every line (including wrapped lines) is hidden. */
+  .skills .skills-items {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 0 0 -1.2rem;
     padding: 0;
     list-style: none;
+    clip-path: inset(0 0 0 1.2rem);
   }
-  .post .skills-items li {
+  .skills .skills-items li {
     margin: 0;
   }
-  /* The separator trails each item, so a wrapped line never starts with one. */
-  .skills-items li:not(:last-child)::after {
+  .skills .skills-items li::before {
     content: '·';
-    margin: 0 0.55rem;
+    content: '·' / '';
+    display: inline-block;
+    width: 1.2rem;
+    text-align: center;
+    font-weight: 700;
     color: var(--global-text-color-light);
   }
   @media (max-width: 575.98px) {
     .skills-row {
       grid-template-columns: minmax(0, 1fr);
-      row-gap: 0.15rem;
+      row-gap: 0.3rem;
     }
   }
 </style>
 <div class="skills">
   {% for row in include.rows %}
     <div class="skills-row">
-      <div class="skills-label">{{ row.category }}</div>
-      <ul class="skills-items">
+      <div class="skills-label" id="skills-label-{{ forloop.index }}">{{ row.category | escape }}</div>
+      <ul class="skills-items" role="list" aria-labelledby="skills-label-{{ forloop.index }}">
         {% for item in row.items %}
-          <li>{{ item }}</li>
+          <li>{{ item | escape }}</li>
         {% endfor %}
       </ul>
     </div>

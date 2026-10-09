@@ -78,6 +78,12 @@ layout: default
       {% include timeline.liquid entries=site.data.education %}
     {% endif %}
 
+    <!-- Expertise cards (entries in _data/expertise.yml) -->
+    {% if page.expertise and site.data.expertise %}
+      <h2>expertise</h2>
+      {% include expertise.liquid entries=site.data.expertise %}
+    {% endif %}
+
     <!-- Selected projects: the "featured" cards, then the rest as wide cards -->
     {% if page.selected_projects %}
       <h2>

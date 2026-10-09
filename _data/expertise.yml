@@ -1,0 +1,45 @@
+# Expertise cards on the homepage (rendered by _includes/expertise.liquid).
+#
+#   title     card heading
+#   icon      Font Awesome classes, e.g. "fa-solid fa-server" (https://fontawesome.com/search?ic=free)
+#   summary   optional one-line description
+#   tags      skills, shown as tags
+
+- title: Security Research
+  icon: fa-solid fa-shield-halved
+  summary: Mobile and super-app security, finding missing permission checks with dynamic and static analysis.
+  tags:
+    - Android
+    - Java
+    - Xposed
+    - Dynamic Analysis
+    - Static Analysis
+    - Vulnerability Disclosure
+
+- title: Full-Stack Development
+  icon: fa-solid fa-server
+  summary: REST APIs, data pipelines and web dashboards, tested in CI.
+  tags:
+    - Python
+    - FastAPI
+    - Flask
+    - SQLAlchemy
+    - Pydantic
+    - PostgreSQL
+    - SQLite
+    - React
+    - TypeScript
+    - JavaScript
+    - pytest
+    - GitHub Actions
+
+- title: LLM Applications
+  icon: fa-solid fa-robot
+  summary: LLM-generated test cases, structured outputs across providers, and MCP tools.
+  tags:
+    - Claude
+    - GPT-4
+    - DeepSeek
+    - Structured Outputs
+    - MCP
+    - Playwright

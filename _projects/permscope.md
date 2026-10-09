@@ -29,4 +29,4 @@ Super-apps such as WeChat, QQ, Alipay and Baidu let third-party mini-programs ca
 - Of the 258 APIs that reach permission-protected Android resources, only 75 enforce a matching permission. The other **183** (8.85% of all APIs tested) do not: 96 in WeChat, 43 in Alipay, 33 in Baidu and 11 in QQ. 81 of them reach dangerous-level Android permissions.
 - Reported to Tencent, Alipay and Baidu, who acknowledged the findings and fixed key issues. Alipay paid a **$400 bug bounty**.
 
-A follow-up study, [Beyond the Android Oracle](https://github.com/capy-zhiao/miniapp-scope-characterization) (ACM SaTS ’26), uses static analysis to characterize 3,151 mini-program APIs across WeChat, Douyin and Alipay.
+A follow-up study, [Beyond the Android Oracle]({{ '/projects/super_app_scopes/' | relative_url }}) (ACM SaTS ’26), uses static analysis to characterize 3,151 mini-program APIs across WeChat, Douyin and Alipay.

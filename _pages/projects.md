@@ -5,7 +5,7 @@ permalink: /projects/
 description: Software I built and run. Each page covers the problem, my part, the main design decisions, and how I checked that it works.
 nav: true
 nav_order: 1
-display_categories: [featured, hackathon]
+display_categories: [featured, research, hackathon]
 horizontal: false
 ---
 

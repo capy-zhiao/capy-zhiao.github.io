@@ -1,7 +1,7 @@
 ---
 layout: page
 title: LeetCode Tracker
-description: A full-stack spaced-repetition app that schedules reviews from how each attempt went and builds a ranked daily queue. React, FastAPI, 200+ tests.
+description: Spaced-repetition app that picks what to review each day from past attempts. React, FastAPI, 200+ tests.
 img: assets/img/projects/thumb_leetcode_tracker.png
 importance: 2
 category: featured

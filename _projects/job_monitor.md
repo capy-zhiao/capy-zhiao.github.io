@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Job Monitor
-description: Monitors 106 career feeds every 15 minutes and publishes matching openings to a live dashboard and Discord, with on-demand LinkedIn search.
+description: Tracks new-grad jobs from 106 career feeds every 15 minutes. Live dashboard, Discord alerts, on-demand LinkedIn search.
 img: assets/img/projects/thumb_job_monitor.png
 importance: 1
 category: featured

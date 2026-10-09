@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CodeMind
-description: Hack the North 2025 prototype, team of three. I built the backend that saves AI coding conversations as structured records.
+description: Hack the North 2025, team of three. I built the backend that saves AI coding chats as structured records.
 home_line: a Hack the North 2025 prototype where I built the backend for a team of three
 img: assets/img/projects/thumb_codemind.png
 importance: 1

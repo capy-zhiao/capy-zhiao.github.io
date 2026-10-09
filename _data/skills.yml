@@ -1,0 +1,25 @@
+# Skills on the homepage, one row per category (rendered by _includes/skills.liquid).
+#
+#   category  row label
+#   items     skills in that category, in display order
+
+- category: Languages
+  items: [Python, Java, TypeScript, JavaScript]
+
+- category: Backend
+  items: [FastAPI, Flask, REST APIs, SQLAlchemy, Pydantic]
+
+- category: Frontend
+  items: [React, TypeScript]
+
+- category: Databases
+  items: [PostgreSQL, SQLite]
+
+- category: Testing & CI
+  items: [pytest, unittest, Playwright, GitHub Actions, Git]
+
+- category: AI / LLM
+  items: [Claude API, OpenAI API, DeepSeek API, Structured Outputs, MCP]
+
+- category: Security
+  items: [Android, Xposed, Static Analysis, Dynamic Analysis]

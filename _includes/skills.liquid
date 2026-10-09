@@ -1,0 +1,60 @@
+{%- comment -%}
+  Skills as rows: category label on the left, the skills on the right.
+  On phones the label sits above its skills.
+  Usage: {% include skills.liquid rows=site.data.skills %}
+{%- endcomment -%}
+<style>
+  .skills {
+    margin-bottom: 2rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+  .skills-row {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    column-gap: 1.5rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .skills-label {
+    color: var(--global-theme-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.9;
+  }
+  .post .skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .post .skills-items li {
+    margin: 0;
+  }
+  /* The separator trails each item, so a wrapped line never starts with one. */
+  .skills-items li:not(:last-child)::after {
+    content: '·';
+    margin: 0 0.55rem;
+    color: var(--global-text-color-light);
+  }
+  @media (max-width: 575.98px) {
+    .skills-row {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 0.15rem;
+    }
+  }
+</style>
+<div class="skills">
+  {% for row in include.rows %}
+    <div class="skills-row">
+      <div class="skills-label">{{ row.category }}</div>
+      <ul class="skills-items">
+        {% for item in row.items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

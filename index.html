@@ -126,7 +126,57 @@
       border-radius: 6px;
     }
   }
-</style> <h2>experience</h2> <div class="timeline"> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/uwaterloo.png" alt="CrySP Lab, University of Waterloo logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="https://crysp.uwaterloo.ca/" rel="external nofollow noopener" target="_blank">CrySP Lab, University of Waterloo</a></span> <span class="timeline-location">Waterloo, Canada</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Software Engineer | Research Assistant</span> <span class="timeline-date">May 2025 – Present</span> </div> </div> </div> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/iscas.png" alt="Institute of Software, Chinese Academy of Sciences (ISCAS) logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="http://www.iscas.ac.cn/" rel="external nofollow noopener" target="_blank">Institute of Software, Chinese Academy of Sciences (ISCAS)</a></span> <span class="timeline-location">Beijing, China</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Software Engineer Intern</span> <span class="timeline-date">Jan 2022 – May 2024</span> </div> </div> </div> </div> <h2>education</h2> <div class="timeline"> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/uwaterloo.png" alt="University of Waterloo logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="https://uwaterloo.ca/" rel="external nofollow noopener" target="_blank">University of Waterloo</a></span> <span class="timeline-location">Waterloo, Canada</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Master of Mathematics (MMath) in Computer Science</span> <span class="timeline-date">May 2025 – Apr 2027 (Expected)</span> </div> </div> </div> </div> <h2> <a href="/projects/" style="color: inherit">selected projects</a> </h2> <style>
+</style> <h2>experience</h2> <div class="timeline"> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/uwaterloo.png" alt="CrySP Lab, University of Waterloo logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="https://crysp.uwaterloo.ca/" rel="external nofollow noopener" target="_blank">CrySP Lab, University of Waterloo</a></span> <span class="timeline-location">Waterloo, Canada</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Software Engineer | Research Assistant</span> <span class="timeline-date">May 2025 – Present</span> </div> </div> </div> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/iscas.png" alt="Institute of Software, Chinese Academy of Sciences (ISCAS) logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="http://www.iscas.ac.cn/" rel="external nofollow noopener" target="_blank">Institute of Software, Chinese Academy of Sciences (ISCAS)</a></span> <span class="timeline-location">Beijing, China</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Software Engineer Intern</span> <span class="timeline-date">Jan 2022 – May 2024</span> </div> </div> </div> </div> <h2>education</h2> <div class="timeline"> <div class="timeline-entry"> <div class="timeline-logo"> <img src="/assets/img/logos/uwaterloo.png" alt="University of Waterloo logo" loading="lazy"> </div> <div class="timeline-body"> <div class="timeline-row"> <span class="timeline-org"><a href="https://uwaterloo.ca/" rel="external nofollow noopener" target="_blank">University of Waterloo</a></span> <span class="timeline-location">Waterloo, Canada</span> </div> <div class="timeline-row timeline-role-row"> <span class="timeline-role">Master of Mathematics (MMath) in Computer Science</span> <span class="timeline-date">May 2025 – Apr 2027 (Expected)</span> </div> </div> </div> </div> <h2>skills</h2> <style>
+  .skills {
+    margin-bottom: 2rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+  .skills-row {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    column-gap: 1.5rem;
+    align-items: baseline;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .skills-label {
+    color: var(--global-theme-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  /* Each item starts with a separator. The list is shifted left by one
+     separator width and that strip is clipped, so the separator in front of
+     the first item on every line (including wrapped lines) is hidden. */
+  .skills .skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 -1.2rem;
+    padding: 0;
+    list-style: none;
+    clip-path: inset(0 0 0 1.2rem);
+  }
+  .skills .skills-items li {
+    margin: 0;
+  }
+  .skills .skills-items li::before {
+    content: '·';
+    content: '·' / '';
+    display: inline-block;
+    width: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--global-text-color-light);
+  }
+  @media (max-width: 575.98px) {
+    .skills-row {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 0.3rem;
+    }
+  }
+</style> <div class="skills"> <div class="skills-row"> <div class="skills-label" id="skills-label-1">Languages</div> <ul class="skills-items" role="list" aria-labelledby="skills-label-1"> <li>Python</li> <li>Java</li> <li>C++</li> <li>C</li> <li>TypeScript</li> <li>JavaScript</li> <li>SQL</li> </ul> </div> <div class="skills-row"> <div class="skills-label" id="skills-label-2">Backend &amp; Web</div> <ul class="skills-items" role="list" aria-labelledby="skills-label-2"> <li>FastAPI</li> <li>Flask</li> <li>REST APIs</li> <li>SQLAlchemy</li> <li>Pydantic</li> <li>PostgreSQL</li> <li>SQLite</li> <li>React</li> </ul> </div> <div class="skills-row"> <div class="skills-label" id="skills-label-3">Testing &amp; DevOps</div> <ul class="skills-items" role="list" aria-labelledby="skills-label-3"> <li>pytest</li> <li>unittest</li> <li>HTTP mocking</li> <li>GitHub Actions</li> <li>Docker</li> <li>Git</li> </ul> </div> <div class="skills-row"> <div class="skills-label" id="skills-label-4">Integrations</div> <ul class="skills-items" role="list" aria-labelledby="skills-label-4"> <li>Third-party APIs</li> <li>API reverse engineering</li> <li>Playwright crawling</li> </ul> </div> <div class="skills-row"> <div class="skills-label" id="skills-label-5">LLM Integration</div> <ul class="skills-items" role="list" aria-labelledby="skills-label-5"> <li>LLM APIs (Claude, OpenAI, DeepSeek)</li> <li>MCP servers</li> <li>LLM test generation</li> </ul> </div> <div class="skills-row"> <div class="skills-label" id="skills-label-6">Security</div> <ul class="skills-items" role="list" aria-labelledby="skills-label-6"> <li>Android internals</li> <li>Xposed hooking</li> <li>Dynamic analysis</li> <li>Static analysis</li> </ul> </div> </div> <h2> <a href="/projects/" style="color: inherit">selected projects</a> </h2> <style>
   .projects .card { position: relative; }
   .projects .card .stretched-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
   .projects .card .github-icon { position: relative; z-index: 2; }

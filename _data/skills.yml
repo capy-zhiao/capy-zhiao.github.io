@@ -7,7 +7,7 @@
   items: [Python, Java, C++, C, TypeScript, JavaScript, SQL]
 
 - category: Backend & Web
-  items: [FastAPI, Flask, REST APIs, SQLAlchemy, Pydantic, SQLite, React]
+  items: [FastAPI, Flask, REST APIs, SQLAlchemy, Pydantic, PostgreSQL, SQLite, React]
 
 - category: Testing & DevOps
   items: [pytest, unittest, HTTP mocking, GitHub Actions, Docker, Git]

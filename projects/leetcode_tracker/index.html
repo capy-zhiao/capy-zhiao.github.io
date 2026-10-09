@@ -38,7 +38,7 @@ ninja.data = [{
           },
         },{id: "projects-codemind",
           title: 'CodeMind',
-          description: "Hack the North 2025, team of three. I built the backend that saves AI coding chats as structured records.",
+          description: "Our team built CodeMind, a local-first tool that turns AI coding sessions into a searchable timeline. A custom Model Context Protocol (MCP) server collects sessions from Cursor and Claude, and an OpenAI model extracts the key details and indexes them.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/codemind/";
             },},{id: "projects-job-monitor",
@@ -56,6 +56,11 @@ ninja.data = [{
           description: "Found 183 mini-program APIs in WeChat, QQ, Alipay and Baidu that skip permission checks. Published at USENIX Security &#39;26.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/permscope/";
+            },},{id: "projects-scopes-in-super-apps",
+          title: 'Scopes in Super Apps',
+          description: "Analyzed 3,151 mini-program APIs in WeChat, Douyin and Alipay. Over 90% fall outside Android&#39;s permission model. First-author paper at ACM SaTS &#39;26.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/super_app_scopes/";
             },},{
         id: 'social-email',
         title: 'email',

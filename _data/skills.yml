@@ -4,7 +4,7 @@
 #   items     skills in that category, in display order
 
 - category: Languages
-  items: [Python, Java, TypeScript, JavaScript]
+  items: [Python, Java, C++, C, TypeScript, JavaScript, SQL]
 
 - category: Backend
   items: [FastAPI, Flask, REST APIs, SQLAlchemy, Pydantic]
@@ -15,8 +15,8 @@
 - category: Databases
   items: [PostgreSQL, SQLite]
 
-- category: Testing & CI
-  items: [pytest, unittest, Playwright, GitHub Actions, Git]
+- category: DevOps & Testing
+  items: [Docker, GitHub Actions, Git, pytest, unittest, Playwright]
 
 - category: AI / LLM
   items: [Claude API, OpenAI API, DeepSeek API, Structured Outputs, MCP]

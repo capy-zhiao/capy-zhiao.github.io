@@ -1,20 +1,27 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// The visitor's own choice is stored under its own key, and only when they click the
+// toggle. (Before, every first visit saved the default "light" under "theme", so a new
+// default would never reach anyone who had already visited.)
+const THEME_CHOICE_KEY = "theme-choice";
+
+// Toggle through dark, light, and system theme settings, starting from the dark default.
 let toggleThemeSetting = () => {
   let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
+  if (themeSetting == "dark") {
     setThemeSetting("light");
   } else if (themeSetting == "light") {
-    setThemeSetting("dark");
-  } else {
     setThemeSetting("system");
+  } else {
+    setThemeSetting("dark");
   }
 };
 
-// Change the theme setting and apply the theme.
-let setThemeSetting = (themeSetting) => {
-  localStorage.setItem("theme", themeSetting);
+// Change the theme setting and apply the theme. Saved only when `remember` is true.
+let setThemeSetting = (themeSetting, remember = true) => {
+  if (remember) {
+    localStorage.setItem(THEME_CHOICE_KEY, themeSetting);
+  }
 
   document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
@@ -253,11 +260,11 @@ let transTheme = () => {
 };
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "light" (customized; upstream default is "system").
+// "system". Default is "dark" (customized; upstream default is "system").
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
+  let themeSetting = localStorage.getItem(THEME_CHOICE_KEY);
   if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "light";
+    themeSetting = "dark";
   }
   return themeSetting;
 };
@@ -281,7 +288,7 @@ let determineComputedTheme = () => {
 let initTheme = () => {
   let themeSetting = determineThemeSetting();
 
-  setThemeSetting(themeSetting);
+  setThemeSetting(themeSetting, false);
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {

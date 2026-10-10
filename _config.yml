@@ -84,7 +84,7 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false # footer sits at the end of the page instead of a bar fixed to the bottom of the screen
 search_enabled: true
 socials_in_search: true
 posts_in_search: true

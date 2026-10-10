@@ -8,13 +8,7 @@
   .projects .card { position: relative; }
   .projects .card .stretched-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
   .projects .card .github-icon { position: relative; z-index: 2; }
-  /* Wide card (image left, text right). The theme's Bootstrap layer has no
-     col-md-* widths, so the layout is spelled out here. */
-  .projects .card-horizontal-row { display: flex; flex-wrap: wrap; }
-  .projects .card-horizontal-img { flex: 0 0 40%; max-width: 40%; }
-  .projects .card-horizontal-img img { width: 100%; height: 100%; object-fit: cover; }
-  .projects .card-horizontal-body { flex: 1 1 0; min-width: 0; }
-  @media (max-width: 767px) {
-    .projects .card-horizontal-img, .projects .card-horizontal-body { flex-basis: 100%; max-width: 100%; }
-  }
+  /* Three cards per row: at the theme's h2 size most titles wrap to two lines. */
+  .projects .card .card-title { font-size: 1.6rem; }
+  .projects { margin-bottom: 1.5rem; }
 </style>

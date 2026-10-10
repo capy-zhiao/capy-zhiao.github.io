@@ -6,7 +6,8 @@ Built with [Jekyll](https://jekyllrb.com/) and the [al-folio](https://github.com
 
 ## Editing
 
-- **Bio / profile** — `_pages/about.md` (profile photo: `assets/img/prof_pic.jpg`)
+- **Bio** — `_pages/about.md` (no profile photo; to show one, add a `profile:` block with `image: prof_pic.jpg`)
+- **Accent color** — `$purple-color` in `assets/css/main.scss` (light mode; dark mode keeps the theme's blue)
 - **Experience / education** — `_data/experience.yml` and `_data/education.yml`
   (newest first). For a logo, put the image in `assets/img/logos/` and set
   `logo: <file name>` on the entry; without one, the `short` name is shown in a badge.

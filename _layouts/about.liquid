@@ -84,30 +84,22 @@ layout: default
       {% include skills.liquid rows=site.data.skills %}
     {% endif %}
 
-    <!-- Selected projects: the "featured" cards, then the rest as wide cards -->
+    <!-- Selected projects: one grid, three cards per row; "featured" projects first -->
     {% if page.selected_projects %}
       <h2>
         <a href="{{ '/projects/' | relative_url }}" style="color: inherit">selected projects</a>
       </h2>
       {% assign featured_projects = site.projects | where: 'category', 'featured' | sort: 'importance' %}
+      {% assign other_projects = site.projects | where_exp: 'p', "p.category != 'featured'" | sort: 'importance' %}
+      {% assign home_projects = featured_projects | concat: other_projects %}
       {% include project_card_styles.liquid %}
       <div class="projects">
         <div class="row row-cols-1 row-cols-md-3">
-          {% for project in featured_projects %}
+          {% for project in home_projects %}
             {% include projects.liquid %}
           {% endfor %}
         </div>
       </div>
-      {% assign other_projects = site.projects | where_exp: 'p', "p.category != 'featured'" | sort: 'importance' %}
-      {% if other_projects.size > 0 %}
-        <div class="projects">
-          <div class="row row-cols-1">
-            {% for project in other_projects %}
-              {% include projects_horizontal.liquid %}
-            {% endfor %}
-          </div>
-        </div>
-      {% endif %}
     {% endif %}
 
     <!-- Selected papers -->

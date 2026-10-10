@@ -4,12 +4,6 @@ title: about
 permalink: /
 subtitle: MMath in Computer Science · University of Waterloo
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info:
-
 selected_projects: true # featured project cards (see _layouts/about.liquid)
 selected_papers: true # includes a list of papers marked as "selected={true}"
 experience: true # entries from _data/experience.yml

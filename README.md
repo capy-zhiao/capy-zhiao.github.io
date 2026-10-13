@@ -15,17 +15,11 @@ Built with [Jekyll](https://jekyllrb.com/) and the [al-folio](https://github.com
 - **Social links** — `_data/socials.yml`
 - **Site settings** — `_config.yml`
 
-### Updating the USENIX 2026 entry later
+### Paper entries
 
-In `_bibliography/papers.bib`, inside the `@inproceedings{wei2026raising, ...}` entry:
-
-- **Add the paper link** when public — add one line, e.g.
-  `html = {https://www.usenix.org/conference/usenixsecurity26/presentation/wei},`
-  (or `pdf = {...}` for a hosted PDF, or `arxiv = {NNNN.NNNNN},`).
-- **Add the poster** — replace `assets/img/publication_preview/permscope_poster.png`
-  with the real thumbnail, and/or add `poster = {permscope_poster.pdf},`
-  (file placed in `assets/pdf/`) to show a "Poster" button.
-- Then remove the `additional_info = {Paper PDF and poster coming soon.}` line.
+In `_bibliography/papers.bib`, `html`, `pdf`, `code` and `poster` fields add link buttons
+(a `poster` file goes in `assets/pdf/`). A `preview = {file.png},` field would add a thumbnail
+image from `assets/img/publication_preview/`; the entries leave it out on purpose.
 
 ## Deploy
 

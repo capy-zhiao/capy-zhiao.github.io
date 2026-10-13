@@ -51,11 +51,21 @@ ninja.data = [{
           description: "Spaced-repetition app that picks what to review each day from past attempts. React, FastAPI, 200+ tests.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/leetcode_tracker/";
+            },},{id: "projects-lorawan-fuzzer",
+          title: 'LoRaWAN Fuzzer',
+          description: "A fuzzer that sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and records whether a valid downlink comes back.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lorawan_fuzzer/";
             },},{id: "projects-permscope",
           title: 'PermScope',
           description: "Found 183 mini-program APIs in WeChat, QQ, Alipay and Baidu that skip permission checks. Published at USENIX Security &#39;26.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/permscope/";
+            },},{id: "projects-code-review-hotspots",
+          title: 'Code Review Hotspots',
+          description: "Tested whether a pull request&#39;s topic predicts which of its files reviewers comment on, over 33,596 PRs written by AI coding agents. I built the data collection and the evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/review_hotspots/";
             },},{id: "projects-scopes-in-super-apps",
           title: 'Scopes in Super Apps',
           description: "Analyzed 3,151 mini-program APIs in WeChat, Douyin and Alipay. Over 90% fall outside Android&#39;s permission model. First-author paper at ACM SaTS &#39;26.",

@@ -1,0 +1,123 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> LoRaWAN Fuzzer | Zhiao Wei </title> <meta name="author" content="Zhiao Wei"> <meta name="description" content="A fuzzer that sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and records whether a valid downlink comes back."> <meta name="keywords" content="Zhiao Wei, University of Waterloo, computer security, mini-program, mobile security"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%90%B9&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://capy-zhiao.github.io/projects/lorawan_fuzzer/"> <script src="/assets/js/theme.js?v=e5b8c8a98977459a53d1d0bd9fb478af"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zhiao</span> Wei </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">LoRaWAN Fuzzer</h1> <p class="post-description">A fuzzer that sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and records whether a valid downlink comes back.</p> </header> <article> <p><a href="https://github.com/capy-zhiao/lorawan_note_send" rel="external nofollow noopener" target="_blank">Code on GitHub</a> · Solo project, November 2023 · Built on an open-source LoRaWAN device simulator; the fuzzer, the ChirpStack setup and the guide are mine</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/lorawan_fuzz_round-480.webp 480w,/assets/img/projects/lorawan_fuzz_round-800.webp 800w,/assets/img/projects/lorawan_fuzz_round-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/lorawan_fuzz_round.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="One fuzzing round" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption">One fuzzing round: the simulated gateway polls the server (PULL DATA), sends the mutated uplink (PUSH DATA), and receives the server's downlink (PULL RESP).</div> <h3 id="the-problem">The problem</h3> <p>LoRaWAN devices reach a network server through gateways, so testing how a server handles unusual traffic needs devices and a gateway. A software device and gateway can send chosen messages on demand, without radio hardware.</p> <h3 id="what-i-built">What I built</h3> <ul> <li>A test setup with <strong>ChirpStack</strong> as the network server, and a simulated gateway and over-the-air-activated device registered in it. The simulator (<strong>Python</strong>, adapted from the open-source one) handles the LoRaWAN 1.1 join, payload encryption and message integrity codes, and talks to ChirpStack over the Semtech UDP packet-forwarder protocol.</li> <li>A <code class="language-plaintext highlighter-rouge">fuzz</code> command in <strong>Python</strong>: it takes a seed payload, makes 20 mutated versions (each character is replaced by a random printable one with probability 0.5), and sends each one as a confirmed uplink through the simulated gateway. For every round it records whether a downlink came back and passed its integrity check, and writes the results to a CSV file.</li> <li>A step-by-step guide to the setup: configuration, gateway poll, join, uplink and fuzzing.</li> </ul> <h3 id="results">Results</h3> <p>In the recorded run, ChirpStack sent back a downlink for all 20 uplinks, and each one passed the integrity check. That is the expected outcome: the payload is mutated before encryption, so every frame reaches ChirpStack well formed. The run shows the setup works end to end; no anomaly was found.</p> <h3 id="limits">Limits</h3> <p>Only the application payload is mutated, before encryption. Header fields and MAC commands are not mutated; that would be the next step.</p> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 Zhiao Wei. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "projects",
+          description: "Software I built and run. Each page covers the problem, my part, the main design decisions, and how I checked that it works.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "* denotes equal contribution.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "projects-codemind",
+          title: 'CodeMind',
+          description: "Our team built CodeMind, a local-first tool that turns AI coding sessions into a searchable timeline. A custom Model Context Protocol (MCP) server collects sessions from Cursor and Claude, and an OpenAI model extracts the key details and indexes them.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/codemind/";
+            },},{id: "projects-job-monitor",
+          title: 'Job Monitor',
+          description: "Tracks new-grad jobs from 106 career feeds every 15 minutes. Live dashboard, Discord alerts, on-demand LinkedIn search.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/job_monitor/";
+            },},{id: "projects-leetcode-tracker",
+          title: 'LeetCode Tracker',
+          description: "Spaced-repetition app that picks what to review each day from past attempts. React, FastAPI, 200+ tests.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/leetcode_tracker/";
+            },},{id: "projects-lorawan-fuzzer",
+          title: 'LoRaWAN Fuzzer',
+          description: "A fuzzer that sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and records whether a valid downlink comes back.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lorawan_fuzzer/";
+            },},{id: "projects-permscope",
+          title: 'PermScope',
+          description: "Found 183 mini-program APIs in WeChat, QQ, Alipay and Baidu that skip permission checks. Published at USENIX Security &#39;26.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/permscope/";
+            },},{id: "projects-code-review-hotspots",
+          title: 'Code Review Hotspots',
+          description: "Tested whether a pull request&#39;s topic predicts which of its files reviewers comment on, over 33,596 PRs written by AI coding agents. I built the data collection and the evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/review_hotspots/";
+            },},{id: "projects-scopes-in-super-apps",
+          title: 'Scopes in Super Apps',
+          description: "Analyzed 3,151 mini-program APIs in WeChat, Douyin and Alipay. Over 90% fall outside Android&#39;s permission model. First-author paper at ACM SaTS &#39;26.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/super_app_scopes/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%7A%68%69%61%6F.%77%65%69@%75%77%61%74%65%72%6C%6F%6F.%63%61", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/capy-zhiao", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

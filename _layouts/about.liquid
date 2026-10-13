@@ -24,6 +24,11 @@ layout: default
       /* The Email / LinkedIn / GitHub buttons near the top cover contact, so the
          icon row at the bottom is a quiet repeat instead of 4rem icons. */
       .social .contact-icons { font-size: 2rem; }
+      article > .clearfix p { max-width: 46rem; }
+      .publications { margin-bottom: 1rem; }
+      @media (max-width: 575.98px) {
+        .publications abbr.badge { width: auto !important; padding: 0.25rem 0.6rem; }
+      }
     </style>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">

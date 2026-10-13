@@ -1,6 +1,6 @@
 ---
-# Local copy of al_folio_core 1.0.11's assets/css/main.scss; the only change is
-# the accent color passed to "variables" below.
+# Local copy of al_folio_core 1.0.11's assets/css/main.scss. Changes: the accent
+# color passed to "variables" below, and darker/lighter muted text at the end.
 ---
 @charset "utf-8";
 
@@ -35,3 +35,12 @@
 @use "tabs";
 @use "teachings";
 @use "typograms";
+
+/* Muted text (dates, locations, organisations): the theme's #828282 is under
+   4.5:1 contrast on both backgrounds. */
+:root {
+  --global-text-color-light: #666666;
+}
+html[data-theme="dark"] {
+  --global-text-color-light: #9a9a9a;
+}

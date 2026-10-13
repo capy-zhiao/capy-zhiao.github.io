@@ -6,13 +6,14 @@
   separately clickable.
 {%- endcomment -%}
 <style>
-  .projects .card { position: relative; }
+  .projects .card { position: relative; border: 1px solid var(--global-divider-color); overflow: hidden; }
+  .projects .card .card-body { display: flex; flex-direction: column; }
   .projects .card .stretched-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
-  .projects .card .github-icon { position: relative; z-index: 2; display: flex; align-items: center; gap: 1rem; }
-  .projects .card .card-link { font-size: 0.95rem; }
+  .projects .card .github-icon { position: relative; z-index: 2; display: flex; align-items: center; gap: 1rem; margin-top: auto; }
+  .projects .card .card-link { font-size: 0.9rem; font-weight: 400; }
   /* Three cards per row: at the theme's h2 size most titles wrap to two lines. */
   .projects .card .card-title { font-size: 1.45rem; }
   /* Same image shape on every card, whatever the screenshot's size. */
-  .projects .card .card-img-top { aspect-ratio: 16 / 10; object-fit: cover; }
+  .projects .card .card-img-top { aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 1px solid var(--global-divider-color); border-radius: 0; }
   .projects { margin-bottom: 1.5rem; }
 </style>

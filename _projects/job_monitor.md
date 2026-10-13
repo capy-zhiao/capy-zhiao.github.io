@@ -7,7 +7,7 @@ importance: 1
 category: featured
 github: https://github.com/capy-zhiao/Job_Monitor
 links:
-  - label: Live demo
+  - label: Live dashboard
     url: https://capy-zhiao.github.io/Job_Monitor/
 ---
 

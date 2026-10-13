@@ -10,9 +10,9 @@ highlights:
   - value: USENIX Security ’26
     text: "co-first author. Our tool found 183 APIs in WeChat, Alipay, Baidu and QQ that skip permission checks; Alipay paid a $400 bug bounty."
   - value: 1,280+
-    text: successful runs of Job Monitor since July 2026, checking 106 career feeds every 15 minutes.
-  - value: "204"
-    text: automated tests, run in CI on every push, in LeetCode Tracker, my React + FastAPI app.
+    text: successful runs of Job Monitor as of October 2026, checking 106 career feeds on a 15-minute schedule.
+  - value: 200+
+    text: backend tests, run in CI on every push, in LeetCode Tracker, a React + FastAPI app I built with Claude Code.
 
 selected_projects: true # featured project cards (see _layouts/about.liquid)
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -32,4 +32,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I build backend services in Python and program-analysis tools in Java. Supervised by [Yousra Aafer](https://cs.uwaterloo.ca/~yaafer/).
+I build backend services in Python and program analysis tools in Java. My MMath research at Waterloo is supervised by [Prof. Yousra Aafer](https://cs.uwaterloo.ca/~yaafer/).

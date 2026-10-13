@@ -1,10 +1,11 @@
 ---
 layout: page
 title: CodeMind
-description: "Our team built CodeMind, a local-first tool that turns AI coding sessions into a searchable timeline. A custom Model Context Protocol (MCP) server collects sessions from Cursor and Claude, and an OpenAI model extracts the key details and indexes them."
+description: "Hack the North 2025: our team built CodeMind, a local-first tool that turns AI coding sessions into a searchable timeline. A custom Model Context Protocol (MCP) server collects sessions from Cursor and Claude, and an OpenAI model extracts the key details and indexes them."
 home_line: a Hack the North 2025 prototype where I built the backend for a team of three
 img: assets/img/projects/thumb_codemind.png
 importance: 2
+home_order: 3 # position on the homepage grid (lower comes first)
 category: hackathon
 links:
   - label: Devpost

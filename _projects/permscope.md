@@ -4,6 +4,7 @@ title: PermScope
 description: Found 183 mini-program APIs in WeChat, QQ, Alipay and Baidu that skip permission checks. Published at USENIX Security '26.
 img: assets/img/projects/thumb_permscope.png
 importance: 3
+home_order: 1 # position on the homepage grid (lower comes first)
 category: featured
 github: https://github.com/capy-zhiao/PERMSCOPE_
 links:

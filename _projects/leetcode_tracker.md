@@ -4,6 +4,7 @@ title: LeetCode Tracker
 description: Spaced-repetition app that picks what to review each day from past attempts. React, FastAPI, 200+ tests.
 img: assets/img/projects/thumb_leetcode_tracker.png
 importance: 2
+home_order: 6 # position on the homepage grid (lower comes first)
 category: featured
 github: https://github.com/capy-zhiao/leetcode-tracker
 ---

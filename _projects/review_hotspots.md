@@ -4,6 +4,7 @@ title: Code Review Hotspots
 description: Tested whether a pull request's topic predicts which of its files reviewers comment on, over 33,596 PRs written by AI coding agents. I built the data collection and the evaluation.
 img: assets/img/projects/thumb_review_hotspots.png
 importance: 3
+home_order: 4 # position on the homepage grid (lower comes first)
 category: course
 github: https://github.com/capy-zhiao/Code_Review_Hotspot_Prediction
 ---

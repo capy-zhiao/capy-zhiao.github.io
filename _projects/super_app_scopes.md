@@ -4,6 +4,7 @@ title: Scopes in Super Apps
 description: Analyzed 3,151 mini-program APIs in WeChat, Douyin and Alipay. Over 90% fall outside Android's permission model. First-author paper at ACM SaTS '26.
 img: assets/img/projects/thumb_super_app_scopes.png
 importance: 1
+home_order: 2 # position on the homepage grid (lower comes first)
 category: research
 github: https://github.com/capy-zhiao/miniapp-scope-characterization
 ---

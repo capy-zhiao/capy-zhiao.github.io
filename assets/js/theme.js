@@ -5,15 +5,15 @@
 // default would never reach anyone who had already visited.)
 const THEME_CHOICE_KEY = "theme-choice";
 
-// Toggle through dark, light, and system theme settings, starting from the dark default.
+// Toggle through light, dark, and system theme settings, starting from the light default.
 let toggleThemeSetting = () => {
   let themeSetting = determineThemeSetting();
-  if (themeSetting == "dark") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
+  if (themeSetting == "light") {
+    setThemeSetting("dark");
+  } else if (themeSetting == "dark") {
     setThemeSetting("system");
   } else {
-    setThemeSetting("dark");
+    setThemeSetting("light");
   }
 };
 
@@ -260,11 +260,11 @@ let transTheme = () => {
 };
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "dark" (customized; upstream default is "system").
+// "system". Default is "light" (customized; upstream default is "system").
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem(THEME_CHOICE_KEY);
   if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "dark";
+    themeSetting = "light";
   }
   return themeSetting;
 };

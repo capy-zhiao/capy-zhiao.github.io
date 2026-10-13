@@ -4,17 +4,7 @@ title: about
 permalink: /
 subtitle: Software Engineer · MMath in Computer Science, University of Waterloo · Graduating April 2027
 
-# Three proof lines under the bio, then contact buttons (see _layouts/about.liquid).
-# Every number here is from a project page; update them together.
-highlights:
-  - value: USENIX Security ’26
-    text: "co-first author. Our tool found 183 APIs in WeChat, Alipay, Baidu and QQ that skip permission checks; Alipay paid a $400 bug bounty."
-  - value: 1,280+
-    text: successful runs of Job Monitor as of October 2026, checking 106 career feeds on a 15-minute schedule.
-  - value: 200+
-    text: backend tests, run in CI on every push, in LeetCode Tracker, a React + FastAPI app I built with Claude Code.
-
-selected_projects: true # featured project cards (see _layouts/about.liquid)
+selected_projects: true # project cards, ordered by each project's home_order
 selected_papers: true # includes a list of papers marked as "selected={true}"
 experience: true # entries from _data/experience.yml
 education: true # entries from _data/education.yml

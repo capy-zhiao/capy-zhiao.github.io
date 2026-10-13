@@ -4,6 +4,7 @@ title: LoRaWAN Fuzzer
 description: A fuzzer that sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and records whether a valid downlink comes back.
 img: assets/img/projects/thumb_lorawan_fuzzer.png
 importance: 4
+home_order: 7 # position on the homepage grid (lower comes first)
 category: security
 github: https://github.com/capy-zhiao/lorawan_note_send
 ---

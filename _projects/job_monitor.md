@@ -4,6 +4,7 @@ title: Job Monitor
 description: Tracks new-grad jobs from 106 career feeds every 15 minutes. Live dashboard, Discord alerts, on-demand LinkedIn search.
 img: assets/img/projects/thumb_job_monitor.png
 importance: 1
+home_order: 5 # position on the homepage grid (lower comes first)
 category: featured
 github: https://github.com/capy-zhiao/Job_Monitor
 links:

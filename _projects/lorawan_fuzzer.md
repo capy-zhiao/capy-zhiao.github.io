@@ -1,7 +1,7 @@
 ---
 layout: page
 title: LoRaWAN Fuzzer
-description: A fuzzer that sends mutated uplinks from a simulated LoRaWAN device to a ChirpStack network server and records how the server responds.
+description: A fuzzer that sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and records whether a valid downlink comes back.
 img: assets/img/projects/thumb_lorawan_fuzzer.png
 importance: 4
 category: security
@@ -16,22 +16,18 @@ github: https://github.com/capy-zhiao/lorawan_note_send
 
 ### The problem
 
-LoRaWAN devices reach a network server through gateways, so testing how a server handles unusual traffic needs devices and a gateway. A software device and gateway can send any message on demand.
+LoRaWAN devices reach a network server through gateways, so testing how a server handles unusual traffic needs devices and a gateway. A software device and gateway can send chosen messages on demand, without radio hardware.
 
 ### What I built
 
-- A test setup with **ChirpStack** as the network server, and a simulated gateway and over-the-air-activated device registered in it. The simulator, in **Python**, handles the LoRaWAN 1.1 join, payload encryption and message integrity codes, and talks to ChirpStack over the Semtech UDP packet-forwarder protocol.
-- A `fuzz` command in **Python**: it takes a seed payload, makes 20 mutated versions (each character is replaced by a random printable one with probability 0.5), and sends each one as a confirmed uplink through the simulated gateway. For every round it records whether the server acknowledged the uplink, whether a downlink came back, the downlink type and the device address, and writes the results to a CSV file.
+- A test setup with **ChirpStack** as the network server, and a simulated gateway and over-the-air-activated device registered in it. The simulator (**Python**, adapted from the open-source one) handles the LoRaWAN 1.1 join, payload encryption and message integrity codes, and talks to ChirpStack over the Semtech UDP packet-forwarder protocol.
+- A `fuzz` command in **Python**: it takes a seed payload, makes 20 mutated versions (each character is replaced by a random printable one with probability 0.5), and sends each one as a confirmed uplink through the simulated gateway. For every round it records whether a downlink came back and passed its integrity check, and writes the results to a CSV file.
 - A step-by-step guide to the setup: configuration, gateway poll, join, uplink and fuzzing.
 
 ### Results
 
-In the recorded run, ChirpStack acknowledged all 20 mutated uplinks and answered each with a confirmed downlink.
+In the recorded run, ChirpStack sent back a downlink for all 20 uplinks, and each one passed the integrity check. That is the expected outcome: the payload is mutated before encryption, so every frame reaches ChirpStack well formed. The run shows the setup works end to end; no anomaly was found.
 
-{% include figure.liquid loading="lazy" path="assets/img/projects/lorawan_fuzz_results.png" title="Fuzzing results" class="img-fluid rounded z-depth-1" zoomable=true %}
+### Limits
 
-<div class="caption">The results file from that run: the mutated payload, gateway acknowledgement, downlink received, downlink type and device address.</div>
-
-### Next step
-
-Only the application payload is mutated so far. Mutating header fields and MAC commands is the next step.
+Only the application payload is mutated, before encryption. Header fields and MAC commands are not mutated; that would be the next step.

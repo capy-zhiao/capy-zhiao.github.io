@@ -2,7 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: MMath in Computer Science · University of Waterloo
+subtitle: Software Engineer · MMath in Computer Science, University of Waterloo · Graduating April 2027
+
+# Three proof lines under the bio, then contact buttons (see _layouts/about.liquid).
+# Every number here is from a project page; update them together.
+highlights:
+  - value: USENIX Security ’26
+    text: "co-first author. Our tool found 183 APIs in WeChat, Alipay, Baidu and QQ that skip permission checks; Alipay paid a $400 bug bounty."
+  - value: 1,280+
+    text: successful runs of Job Monitor since July 2026, checking 106 career feeds every 15 minutes.
+  - value: "204"
+    text: automated tests, run in CI on every push, in LeetCode Tracker, my React + FastAPI app.
 
 selected_projects: true # featured project cards (see _layouts/about.liquid)
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -22,4 +32,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a master's student at the University of Waterloo, Master of Mathematics (MMath) in Computer Science, supervised by [Yousra Aafer](https://cs.uwaterloo.ca/~yaafer/).
+I build backend services in Python and program-analysis tools in Java. Supervised by [Yousra Aafer](https://cs.uwaterloo.ca/~yaafer/).

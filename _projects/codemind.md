@@ -6,6 +6,9 @@ home_line: a Hack the North 2025 prototype where I built the backend for a team 
 img: assets/img/projects/thumb_codemind.png
 importance: 2
 category: hackathon
+links:
+  - label: Devpost
+    url: https://devpost.com/software/gitaihack
 ---
 
 [Devpost](https://devpost.com/software/gitaihack) · Hack the North 2025 · Team of three; I built the backend · Hackathon prototype

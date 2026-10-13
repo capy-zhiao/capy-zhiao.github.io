@@ -1,0 +1,62 @@
+{%- comment -%}
+  Under the bio on the homepage: the proof lines from page.highlights (a bold
+  value, then plain text), then a row of contact buttons built from
+  _data/socials.yml. Plain list and outlined buttons, matching the paper
+  buttons in the research list.
+{%- endcomment -%}
+<style>
+  .hero-proof {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  .hero-proof li {
+    margin: 0 0 0.45rem;
+  }
+  .hero-proof strong {
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.25rem 0 2rem;
+  }
+  .hero-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--global-text-color);
+    border-radius: 4px;
+    color: var(--global-text-color);
+    font-size: 0.95rem;
+  }
+  .hero-links a:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+</style>
+{% if page.highlights %}
+  <ul class="hero-proof">
+    {% for h in page.highlights %}
+      <li>
+        <strong>{{ h.value }}</strong> {{ h.text }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% assign socials = site.data.socials %}
+<p class="hero-links">
+  {% if socials.email %}
+    <a href="mailto:{{ socials.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+  {% endif %}
+  {% if socials.linkedin_username %}
+    <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+  {% endif %}
+  {% if socials.github_username %}
+    <a href="https://github.com/{{ socials.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+  {% endif %}
+</p>

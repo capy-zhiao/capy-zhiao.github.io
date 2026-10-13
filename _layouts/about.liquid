@@ -21,6 +21,9 @@ layout: default
       @media (max-width: 575.98px) {
         .profile { width: 55%; float: none !important; margin: 0 auto 1rem auto !important; }
       }
+      /* The Email / LinkedIn / GitHub buttons near the top cover contact, so the
+         icon row at the bottom is a quiet repeat instead of 4rem icons. */
+      .social .contact-icons { font-size: 2rem; }
     </style>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -46,6 +49,9 @@ layout: default
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
+
+    <!-- Proof lines and contact buttons (page.highlights, _data/socials.yml) -->
+    {% include hero.liquid %}
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -78,12 +84,6 @@ layout: default
       {% include timeline.liquid entries=site.data.education %}
     {% endif %}
 
-    <!-- Skills (rows in _data/skills.yml) -->
-    {% if page.skills and site.data.skills %}
-      <h2>skills</h2>
-      {% include skills.liquid rows=site.data.skills %}
-    {% endif %}
-
     <!-- Selected projects: one grid, three cards per row; "featured" projects first -->
     {% if page.selected_projects %}
       <h2>
@@ -109,6 +109,12 @@ layout: default
       </h2>
       <p><small>* denotes equal contribution.</small></p>
       {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Skills (rows in _data/skills.yml) -->
+    {% if page.skills and site.data.skills %}
+      <h2>skills</h2>
+      {% include skills.liquid rows=site.data.skills %}
     {% endif %}
 
     <!-- Social -->

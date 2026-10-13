@@ -6,6 +6,9 @@ img: assets/img/projects/thumb_permscope.png
 importance: 3
 category: featured
 github: https://github.com/capy-zhiao/PERMSCOPE_
+links:
+  - label: Paper
+    url: https://www.usenix.org/conference/usenixsecurity26/presentation/wei-zhiao
 ---
 
 [Paper (USENIX Security ’26)](https://www.usenix.org/conference/usenixsecurity26/presentation/wei-zhiao) · [PDF](https://www.usenix.org/system/files/usenixsecurity26-wei-zhiao.pdf) · [Poster]({{ '/assets/pdf/PermScope_poster_USENIX26.pdf' | relative_url }}) · [Code on GitHub](https://github.com/capy-zhiao/PERMSCOPE_) · Research project with six authors; I am co-first author with Chao Wang

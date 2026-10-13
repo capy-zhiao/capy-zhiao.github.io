@@ -9,12 +9,11 @@ last_name: Wei
 contact_note: >
   Feel free to reach out by email — it's the best way to get in touch.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal homepage of Zhiao Wei, a master's student in Computer Science at the University of Waterloo.
+  Zhiao Wei: software engineer and MMath Computer Science student at the University of Waterloo, graduating April 2027. Co-first author, USENIX Security '26.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: Zhiao Wei, University of Waterloo, computer security, mini-program, mobile security # add your own keywords or leave empty
+keywords: Zhiao Wei, University of Waterloo, software engineer, backend, Python, Java, computer security, mobile security # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🐹 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -98,9 +97,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: https://capy-zhiao.github.io/assets/img/og_card.png # link-preview image (1200x630) for LinkedIn, Slack, WeChat
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

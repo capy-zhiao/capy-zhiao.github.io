@@ -3,6 +3,7 @@
   one link and puts the GitHub link inside it, which nests anchors: browsers split that
   into several empty links, and the icon link has no name. Here the title is the card
   link (stretched over the card), and the code link sits above it with its own label.
+  Optional front matter `links: [{label, url}]` adds text links (live demo, paper) beside it.
 {%- endcomment -%}
 {% capture project_href %}{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}{% endcapture %}
 <div class="col">
@@ -22,15 +23,20 @@
         <a href="{{ project_href }}" class="stretched-link" style="color: inherit">{{ project.title }}</a>
       </h2>
       <p class="card-text">{{ project.description }}</p>
-      {% if project.github %}
+      {% if project.github or project.links %}
         <div class="github-icon">
-          <a
-            href="{{ project.github }}"
-            aria-label="View {{ project.title }} source on GitHub"
-            title="View {{ project.title }} source on GitHub"
-          >
-            <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i>
-          </a>
+          {% if project.github %}
+            <a
+              href="{{ project.github }}"
+              aria-label="View {{ project.title }} source on GitHub"
+              title="View {{ project.title }} source on GitHub"
+            >
+              <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i>
+            </a>
+          {% endif %}
+          {% for link in project.links %}
+            <a href="{{ link.url }}" class="card-link">{{ link.label }} ↗</a>
+          {% endfor %}
         </div>
       {% endif %}
     </div>

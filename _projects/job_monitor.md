@@ -6,6 +6,9 @@ img: assets/img/projects/thumb_job_monitor.png
 importance: 1
 category: featured
 github: https://github.com/capy-zhiao/Job_Monitor
+links:
+  - label: Live demo
+    url: https://capy-zhiao.github.io/Job_Monitor/
 ---
 
 [Live dashboard](https://capy-zhiao.github.io/Job_Monitor/) · [Code on GitHub](https://github.com/capy-zhiao/Job_Monitor) · Solo project, running since July 2026

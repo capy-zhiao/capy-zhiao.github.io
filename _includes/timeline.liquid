@@ -1,6 +1,6 @@
 {%- comment -%}
-  Experience / education entries: logo on the left, then organization and
-  location, role and dates, optional course tags and a summary.
+  Experience / education entries: logo on the left, then role (or degree) and
+  dates, organization and location, optional course tags and a summary.
   Usage: {% include timeline.liquid entries=site.data.experience %}
   Styles live in timeline_styles.liquid; include that once per page.
 {%- endcomment -%}
@@ -16,6 +16,10 @@
       </div>
       <div class="timeline-body">
         <div class="timeline-row">
+          <span class="timeline-role">{{ entry.role }}</span>
+          <span class="timeline-date">{{ entry.date }}</span>
+        </div>
+        <div class="timeline-row timeline-org-row">
           <span class="timeline-org">
             {%- if entry.url -%}
               <a href="{{ entry.url }}">{{ entry.org }}</a>
@@ -24,10 +28,6 @@
             {%- endif -%}
           </span>
           <span class="timeline-location">{{ entry.location }}</span>
-        </div>
-        <div class="timeline-row timeline-role-row">
-          <span class="timeline-role">{{ entry.role }}</span>
-          <span class="timeline-date">{{ entry.date }}</span>
         </div>
         {% if entry.courses and entry.courses.size > 0 %}
           <div class="timeline-tags">

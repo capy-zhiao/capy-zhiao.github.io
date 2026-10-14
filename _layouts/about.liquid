@@ -89,6 +89,15 @@ layout: default
       {% include timeline.liquid entries=site.data.education %}
     {% endif %}
 
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">publications</a>
+      </h2>
+      <p><small>* denotes equal contribution.</small></p>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
     <!-- Selected projects: one grid, three cards per row, in each project's home_order -->
     {% if page.selected_projects %}
       <h2>
@@ -103,15 +112,6 @@ layout: default
           {% endfor %}
         </div>
       </div>
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">research</a>
-      </h2>
-      <p><small>* denotes equal contribution.</small></p>
-      {% include selected_papers.liquid %}
     {% endif %}
 
     <!-- Skills (rows in _data/skills.yml) -->

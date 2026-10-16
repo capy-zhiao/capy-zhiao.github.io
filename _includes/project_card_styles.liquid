@@ -16,4 +16,18 @@
   /* Same image shape on every card, whatever the screenshot's size. */
   .projects .card .card-img-top { aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 1px solid var(--global-divider-color); border-radius: 0; }
   .projects { margin-bottom: 1.5rem; }
+  /* Hover: the card lifts with a soft accent shadow and its screenshot zooms slightly */
+  .projects .card { transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s, border-color 0.35s; }
+  .projects .card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--global-theme-color) 45%, var(--global-divider-color));
+    box-shadow: 0 16px 32px -18px color-mix(in srgb, var(--global-theme-color) 55%, transparent);
+  }
+  .projects .card figure { margin: 0; overflow: hidden; }
+  .projects .card .card-img-top { transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .projects .card:hover .card-img-top { transform: scale(1.04); }
+  @media (prefers-reduced-motion: reduce) {
+    .projects .card, .projects .card .card-img-top { transition: none; }
+    .projects .card:hover, .projects .card:hover .card-img-top { transform: none; }
+  }
 </style>

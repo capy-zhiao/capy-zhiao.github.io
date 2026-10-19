@@ -9,10 +9,10 @@ category: featured
 github: https://github.com/capy-zhiao/coding-tracker
 links:
   - label: Live demo
-    url: https://16-54-210-218.sslip.io
+    url: https://tracker.zhiaowei.dev
 ---
 
-[Live demo](https://16-54-210-218.sslip.io) ("Try the demo" needs no account) · [Code on GitHub](https://github.com/capy-zhiao/coding-tracker) · Solo project, built with Claude Code
+[Live demo](https://tracker.zhiaowei.dev) ("Try the demo" needs no account) · [Code on GitHub](https://github.com/capy-zhiao/coding-tracker) · Solo project, built with Claude Code
 
 {% include figure.liquid loading="eager" path="assets/img/projects/coding_tracker_today.png" title="Coding Tracker daily queue" class="img-fluid rounded z-depth-1" %}
 

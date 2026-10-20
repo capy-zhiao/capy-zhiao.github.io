@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Job Monitor
-description: Tracks new-grad jobs from 106 career feeds every 15 minutes. Live dashboard, Discord alerts, on-demand LinkedIn search.
+description: Tracks new-grad jobs from 169 sources. Live dashboard, Discord alerts, on-demand LinkedIn search.
 img: assets/img/projects/thumb_job_monitor.png
 importance: 1
 home_order: 5 # position on the homepage grid (lower comes first)
@@ -24,8 +24,8 @@ New-grad postings are spread across many career sites, and those sites run on di
 
 ### What I built
 
-- A Python pipeline with **21 platform adapters** covering **106 career feeds**, using only the standard library. Several adapters call undocumented endpoints I reverse-engineered, such as Google's `batchexecute` RPC.
-- A **GitHub Actions** job every 15 minutes that fetches every feed, keeps postings that match the title keywords and locations, sends new ones to Discord and commits its state back to the repository.
+- A Python pipeline with **27 platform adapters** covering **169 sources** (company career sites plus three community new-grad lists), using only the standard library. Several adapters call undocumented endpoints I reverse-engineered, such as Google's `batchexecute` RPC.
+- A scheduled **GitHub Actions** job that fetches every source, keeps postings that match the title keywords and locations, sends new ones to Discord and commits its state back to the repository.
 - A [live dashboard](https://capy-zhiao.github.io/Job_Monitor/) in plain JavaScript with search, filters and shareable filtered links.
 - A `/linkedin` command in Discord that searches LinkedIn on demand and posts what the scheduled job has not already reported.
 

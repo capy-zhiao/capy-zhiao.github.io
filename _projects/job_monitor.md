@@ -16,7 +16,7 @@ links:
 
 {% include figure.liquid loading="eager" path="assets/img/projects/job_monitor.png" title="Job Monitor dashboard" class="img-fluid rounded z-depth-1" %}
 
-<div class="caption">The live dashboard: filters on the left, open roles in Canada over time, newest postings first.</div>
+<div class="caption">The live dashboard: a one-line summary, Canadian roles tracked over time, then search and filters above the newest postings, grouped by the day they were first seen.</div>
 
 ### The problem
 

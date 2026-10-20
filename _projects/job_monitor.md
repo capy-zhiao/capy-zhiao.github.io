@@ -38,10 +38,10 @@ New-grad postings are spread across many career sites, and those sites run on di
 - **No server.** State is a JSON file that each run commits back, which costs nothing and keeps a full history. The trade-off is that GitHub can delay scheduled runs; a concurrency group stops runs from overlapping.
 - **One broken source never stops a run.** Every source has a timeout and its own error handling, and a run fails only if nothing comes back. A source that quietly stops returning results could go unnoticed, so an alert for that is the next step.
 - **Duplicates.** The same posting can show up through several feeds, or twice in one. Postings are deduplicated on a stable ID, and the set of seen IDs only grows.
-- **LinkedIn runs on demand, from my machine.** LinkedIn blocks datacenter IPs like GitHub's and does not allow automated scraping, so the bot searches only when asked and keeps no state. Only the scheduled job writes state: when I once ran the monitor on both my laptop and GitHub Actions, a merge conflict broke the state file and alerts stopped for almost two weeks.
+- **LinkedIn runs on demand, from my machine.** LinkedIn blocks datacenter IPs like GitHub's and does not allow automated scraping, so the bot searches only when asked and keeps no state. The monitor runs only as the scheduled job: when I once ran it on both my laptop and GitHub Actions, a merge conflict broke the state file and alerts stopped for almost two weeks.
 
 ### How I checked it
 
-- An offline `unittest` suite with mocked HTTP for the adapters and the LinkedIn parser, plus config checks, run in CI on Python 3.8, 3.12 and 3.13.
+- An offline `unittest` suite with mocked HTTP for 14 of the 27 adapters and the LinkedIn parser, plus config checks, run in CI on Python 3.8, 3.12 and 3.13.
 - As of October 2026: **1,280+ successful runs** and **880+ unique postings** tracked.
 - On its first run in October 2026, `/linkedin` found **7 postings** that were not on the dashboard.

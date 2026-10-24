@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: Software Engineer · MMath in Computer Science, University of Waterloo · Graduating April 2027
 
 selected_projects: true # project cards, ordered by each project's home_order
 selected_papers: true # includes a list of papers marked as "selected={true}"

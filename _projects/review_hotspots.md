@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Code Review Hotspots
-description: Tested whether a pull request's topic predicts which of its files reviewers comment on, over 33,596 PRs written by AI coding agents. I built the data collection and the evaluation.
+description: Does a pull request's topic predict which files reviewers comment on? Tested on 33,596 PRs written by AI coding agents; I built the data collection and evaluation.
 img: assets/img/projects/thumb_review_hotspots.png
 importance: 3
 home_order: 4 # position on the homepage grid (lower comes first)

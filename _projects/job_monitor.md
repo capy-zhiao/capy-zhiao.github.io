@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Job Monitor
-description: Tracks new-grad jobs from 180 sources. Live dashboard, Discord alerts, on-demand LinkedIn search.
+description: Tracks new-grad jobs from 180 sources, with Discord alerts and on-demand LinkedIn search.
 img: assets/img/projects/thumb_job_monitor.png
 importance: 1
 home_order: 5 # position on the homepage grid (lower comes first)

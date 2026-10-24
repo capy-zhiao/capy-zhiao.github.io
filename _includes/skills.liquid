@@ -1,6 +1,6 @@
 {%- comment -%}
-  Skills as rows: category label on the left, the skills on the right.
-  On phones the label sits above its skills.
+  Skills as rows, one row per category. The rows group the skills, so the
+  category name is not shown; it stays as the list's accessible name.
   Usage: {% include skills.liquid rows=site.data.skills %}
 {%- endcomment -%}
 <style>
@@ -9,20 +9,8 @@
     border-top: 1px solid var(--global-divider-color);
   }
   .skills-row {
-    display: grid;
-    grid-template-columns: 9rem minmax(0, 1fr);
-    column-gap: 1.5rem;
-    align-items: baseline;
     padding: 0.65rem 0;
     border-bottom: 1px solid var(--global-divider-color);
-  }
-  .skills-label {
-    color: var(--global-theme-color);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    line-height: 1.5;
   }
   /* Each item starts with a separator. The list is shifted left by one
      separator width and that strip is clipped, so the separator in front of
@@ -47,18 +35,11 @@
     font-weight: 700;
     color: var(--global-text-color-light);
   }
-  @media (max-width: 575.98px) {
-    .skills-row {
-      grid-template-columns: minmax(0, 1fr);
-      row-gap: 0.3rem;
-    }
-  }
 </style>
 <div class="skills">
   {% for row in include.rows %}
     <div class="skills-row">
-      <div class="skills-label" id="skills-label-{{ forloop.index }}">{{ row.category | escape }}</div>
-      <ul class="skills-items" role="list" aria-labelledby="skills-label-{{ forloop.index }}">
+      <ul class="skills-items" role="list" aria-label="{{ row.category | escape }}">
         {% for item in row.items %}
           <li>{{ item | escape }}</li>
         {% endfor %}

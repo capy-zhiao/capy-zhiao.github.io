@@ -2,11 +2,13 @@
 # Same fields as _data/experience.yml, plus:
 #
 #   courses   optional list, shown as tags
+#   hide_org  true to leave out the organization line when the logo already names it
 
 - org: University of Waterloo
   url: https://uwaterloo.ca/
   logo: uwaterloo.png
   short: UW
+  hide_org: true
   role: Master of Mathematics (MMath) in Computer Science
   date: May 2025 – Apr 2027
   courses:

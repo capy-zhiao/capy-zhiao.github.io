@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Coding Tracker
-description: Spaced-repetition app for interview prep, running on AWS. React, FastAPI, Postgres, 260+ tests.
+description: Spaced-repetition app for interview prep. AWS, React, FastAPI, Postgres, 260+ tests.
 img: assets/img/projects/thumb_coding_tracker.png
 importance: 2
 home_order: 6 # position on the homepage grid (lower comes first)

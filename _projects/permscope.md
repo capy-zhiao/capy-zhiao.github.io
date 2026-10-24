@@ -8,7 +8,7 @@ home_order: 1 # position on the homepage grid (lower comes first)
 category: featured
 github: https://github.com/capy-zhiao/PERMSCOPE_
 links:
-  - label: Paper
+  - label: USENIX Security '26
     url: https://www.usenix.org/conference/usenixsecurity26/presentation/wei-zhiao
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: LoRaWAN Fuzzer
-description: Sends mutated uplinks from a simulated LoRaWAN device to a ChirpStack network server and checks whether a valid downlink comes back.
+description: Sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and checks whether a valid downlink comes back.
 img: assets/img/projects/thumb_lorawan_fuzzer.png
 importance: 4
 home_order: 7 # position on the homepage grid (lower comes first)

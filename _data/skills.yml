@@ -1,6 +1,6 @@
 # Skills on the homepage, one row per category (rendered by _includes/skills.liquid).
 #
-#   category  row label
+#   category  the list's accessible name (not shown on the page)
 #   items     skills in that category, in display order (quote items that contain commas)
 
 - category: Languages

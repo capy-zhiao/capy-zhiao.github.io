@@ -47,8 +47,9 @@
 
   /* Publications: venue badge and links as small code tags */
   .publications ol.bibliography li .abbr abbr.badge {
-    width: auto !important;
-    align-self: flex-start; /* on phones the column is a flex box that would stretch it */
+    /* The theme's w-100 sets width: 100% !important inside a cascade layer, which
+       beats any unlayered !important; capping max-width shrinks it to its text. */
+    max-width: max-content;
     padding: 0.15rem 0.45rem;
     border: 1px solid var(--global-theme-color);
     border-radius: 4px;

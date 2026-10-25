@@ -6,6 +6,7 @@ img: assets/img/projects/thumb_lorawan_fuzzer.png
 importance: 4
 home_order: 7 # position on the homepage grid (lower comes first)
 category: security
+stack: [Python, ChirpStack] # card footer; names as written on this page
 github: https://github.com/capy-zhiao/lorawan_note_send
 ---
 

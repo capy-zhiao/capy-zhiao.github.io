@@ -6,6 +6,7 @@ img: assets/img/projects/thumb_review_hotspots.png
 importance: 3
 home_order: 4 # position on the homepage grid (lower comes first)
 category: course
+stack: [Python, pandas, BERTopic] # card footer; names as written on this page
 github: https://github.com/capy-zhiao/Code_Review_Hotspot_Prediction
 ---
 

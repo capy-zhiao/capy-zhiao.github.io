@@ -69,6 +69,14 @@
     color: var(--global-text-color-light);
     white-space: nowrap;
   }
+  /* Dates read like log timestamps: monospace, even-width digits, on the right */
+  .timeline-date {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
   .timeline-org-row {
     margin-top: 0.35rem;
     padding-top: 0.35rem;
@@ -102,6 +110,9 @@
     .timeline-row {
       flex-direction: column;
       align-items: flex-start;
+    }
+    .timeline-date {
+      align-self: flex-end;
     }
     /* Phones: logo above the text, so the text keeps the full width. */
     .timeline-entry {

@@ -1,6 +1,7 @@
 {%- comment -%}
   Skills as rows, one row per category. The rows group the skills, so the
-  category name is not shown; it stays as the list's accessible name.
+  category name is not shown; it stays as the list's accessible name. Each
+  skill is a small code tag: monospace, lowercase, thin border.
   Usage: {% include skills.liquid rows=site.data.skills %}
 {%- endcomment -%}
 <style>
@@ -12,28 +13,23 @@
     padding: 0.65rem 0;
     border-bottom: 1px solid var(--global-divider-color);
   }
-  /* Each item starts with a separator. The list is shifted left by one
-     separator width and that strip is clipped, so the separator in front of
-     the first item on every line (including wrapped lines) is hidden. */
   .skills .skills-items {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 0 -1.2rem;
+    gap: 0.4rem;
+    margin: 0;
     padding: 0;
     list-style: none;
-    clip-path: inset(0 0 0 1.2rem);
   }
   .skills .skills-items li {
     margin: 0;
-  }
-  .skills .skills-items li::before {
-    content: '·';
-    content: '·' / '';
-    display: inline-block;
-    width: 1.2rem;
-    text-align: center;
-    font-weight: 700;
-    color: var(--global-text-color-light);
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    text-transform: lowercase;
   }
 </style>
 <div class="skills">

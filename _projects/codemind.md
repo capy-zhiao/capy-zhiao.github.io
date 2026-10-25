@@ -7,6 +7,7 @@ img: assets/img/projects/thumb_codemind.png
 importance: 2
 home_order: 3 # position on the homepage grid (lower comes first)
 category: hackathon
+stack: [Python, MCP, Pydantic, GPT-4, Flask] # card footer; names as written on this page
 links:
   - label: Devpost
     url: https://devpost.com/software/gitaihack

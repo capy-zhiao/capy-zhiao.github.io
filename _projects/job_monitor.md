@@ -6,6 +6,7 @@ img: assets/img/projects/thumb_job_monitor.png
 importance: 1
 home_order: 5 # position on the homepage grid (lower comes first)
 category: featured
+stack: [Python, GitHub Actions, JavaScript] # card footer; names as written on this page
 github: https://github.com/capy-zhiao/Job_Monitor
 links:
   - label: Live dashboard

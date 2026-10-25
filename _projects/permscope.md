@@ -6,6 +6,7 @@ img: assets/img/projects/thumb_permscope.png
 importance: 3
 home_order: 1 # position on the homepage grid (lower comes first)
 category: featured
+stack: [Java, Xposed, Python, Playwright, LLM] # card footer; names as written on this page
 github: https://github.com/capy-zhiao/PERMSCOPE_
 links:
   - label: USENIX Security '26

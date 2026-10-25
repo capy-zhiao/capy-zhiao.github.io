@@ -1,0 +1,88 @@
+{%- comment -%}
+  Terminal touches for the homepage, in monospace (--font-mono, set in
+  assets/css/main.scss) and the one accent color: the "~/zhiao-wei $ whoami"
+  prompt above the name, "## " section headings, and publication venues and
+  links styled as code tags. Text stays as written; only type and decoration
+  change. Timeline dates, project cards and skills have theirs in their own
+  style includes.
+{%- endcomment -%}
+<style>
+  /* Prompt line above the name, with a blinking block cursor */
+  .term-prompt {
+    margin: 0 0 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--global-text-color-light);
+  }
+  .term-cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.15em;
+    margin-left: 0.15em;
+    vertical-align: text-bottom;
+    background: currentColor;
+    animation: term-blink 1.1s steps(1, end) infinite;
+  }
+  @keyframes term-blink { 50% { opacity: 0; } }
+
+  /* Section headings: monospace with an accent "## " in front */
+  article > h2 {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 1.55rem;
+    letter-spacing: -0.01em;
+  }
+  article > h2::before {
+    content: "## ";
+    content: "## " / "";
+    color: var(--global-theme-color);
+  }
+
+  /* Bold figures in the hero proof lines line up like numbers in a log */
+  .hero-proof strong {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Publications: venue badge and links as small code tags */
+  .publications ol.bibliography li .abbr abbr.badge {
+    width: auto !important;
+    align-self: flex-start; /* on phones the column is a flex box that would stretch it */
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 4px;
+    background: transparent !important;
+    color: var(--global-theme-color) !important;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .publications ol.bibliography li .abbr abbr.badge a {
+    color: inherit;
+  }
+  .publications ol.bibliography li .links a.btn {
+    padding: 0.1rem 0.5rem;
+    margin: 0 0.35rem 0.35rem 0;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    color: var(--global-text-color);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+  .publications ol.bibliography li .links a.btn:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+
+  @media (max-width: 575.98px) {
+    .term-prompt { font-size: 0.85rem; }
+    article > h2 { font-size: 1.35rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .term-cursor { animation: none; }
+  }
+</style>

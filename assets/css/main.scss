@@ -1,6 +1,7 @@
 ---
 # Local copy of al_folio_core 1.0.11's assets/css/main.scss. Changes: the accent
-# color passed to "variables" below, and darker/lighter muted text at the end.
+# color passed to "variables" below, darker/lighter muted text and the monospace
+# font stack at the end.
 ---
 @charset "utf-8";
 
@@ -40,6 +41,9 @@
    4.5:1 contrast on both backgrounds. */
 :root {
   --global-text-color-light: #666666;
+  /* Monospace for the homepage's terminal touches (prompt, headings, dates,
+     tags). JetBrains Mono comes from the Google Fonts link in _config.yml. */
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
 html[data-theme="dark"] {
   --global-text-color-light: #9a9a9a;

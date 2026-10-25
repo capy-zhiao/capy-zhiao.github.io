@@ -2,8 +2,10 @@
 layout: default
 ---
 {% include motion.liquid %}
+{% include terminal_styles.liquid %}
 <div class="post">
   <header class="post-header">
+    <p class="term-prompt" aria-hidden="true">~/zhiao-wei $ whoami<span class="term-cursor"></span></p>
     <h1 class="post-title">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
@@ -31,9 +33,6 @@ layout: default
       .post-header > .post-title:last-child { margin-bottom: 1.5rem; }
       article > .clearfix p { max-width: 46rem; }
       .publications { margin-bottom: 1rem; }
-      @media (max-width: 575.98px) {
-        .publications abbr.badge { width: auto !important; padding: 0.25rem 0.6rem; }
-      }
     </style>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">

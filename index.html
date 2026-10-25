@@ -2,7 +2,7 @@
   :root {
     --max-content-width: 930px;
   }
-</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%90%B9&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://zhiaowei.dev/"> <script src="/assets/js/theme.js?v=e5b8c8a98977459a53d1d0bd9fb478af"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons|JetBrains+Mono:400,500,700&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%90%B9&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://zhiaowei.dev/"> <script src="/assets/js/theme.js?v=e5b8c8a98977459a53d1d0bd9fb478af"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
   </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">about <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <script>
   (function () {
@@ -69,30 +69,21 @@
   .m-js article > h2.m-in::after { transform: scaleX(1); }
 
   /* Scroll reveal: these start hidden and rise in when they enter the viewport */
-  .m-js :is(article > h2, .timeline-entry, .bibliography > li, .projects .col, .skills-row, .social, .personal-note) {
+  .m-js :is(article > h2, .timeline-entry, .bibliography > li, .projects .col, .social, .personal-note) {
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 0.6s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
     transition-delay: var(--m-delay, 0ms);
   }
+  /* Skill rows only fade in */
+  .m-js .skills-row {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    transition-delay: var(--m-delay, 0ms);
+  }
   .m-js :is(article > h2, .timeline-entry, .bibliography > li, .projects .col, .skills-row, .social, .personal-note).m-in {
     opacity: 1;
     transform: none;
-  }
-
-  /* Skill chips pop in one by one once their row is in view */
-  .m-js .skills-row .skills-items li { opacity: 0; }
-  .m-js .skills-row.m-in .skills-items li {
-    opacity: 1;
-    animation: m-pop 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
-    animation-delay: calc(150ms + var(--m-i, 0) * 45ms);
-  }
-
-  /* Contact buttons lift a little on hover */
-  .hero-links a { transition: transform 0.2s ease, border-color 0.2s, color 0.2s, box-shadow 0.25s; }
-  .hero-links a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px -10px var(--global-theme-color);
   }
 
   @keyframes m-draw { from { transform: scaleX(0); } }
@@ -101,11 +92,9 @@
     from { transform: translate3d(0, 0, 0) scale(1); }
     to { transform: translate3d(8%, 6%, 0) scale(1.12); }
   }
-  @keyframes m-pop { from { opacity: 0; transform: translateY(6px) scale(0.85); } }
 
   @media (prefers-reduced-motion: reduce) {
     .post-header .post-title::after, .post-header::before { animation: none; }
-    .hero-links a, .hero-links a:hover { transition: none; transform: none; }
   }
 </style> <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -132,9 +121,6 @@
           targets.push(el);
         });
       });
-      document.querySelectorAll(".skills-items").forEach(function (ul) {
-        Array.prototype.forEach.call(ul.children, function (li, i) { li.style.setProperty("--m-i", i); });
-      });
 
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
@@ -148,7 +134,87 @@
       root.classList.remove("m-js"); /* never leave the page hidden */
     }
   });
-</script> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="font-weight-bold">Zhiao</span> Wei </h1> </header> <article> <style>
+</script> <style>
+  /* Prompt line above the name, with a blinking block cursor */
+  .term-prompt {
+    margin: 0 0 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--global-text-color-light);
+  }
+  .term-cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.15em;
+    margin-left: 0.15em;
+    vertical-align: text-bottom;
+    background: currentColor;
+    animation: term-blink 1.1s steps(1, end) infinite;
+  }
+  @keyframes term-blink { 50% { opacity: 0; } }
+
+  /* Section headings: monospace with an accent "## " in front */
+  article > h2 {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 1.55rem;
+    letter-spacing: -0.01em;
+  }
+  article > h2::before {
+    content: "## ";
+    content: "## " / "";
+    color: var(--global-theme-color);
+  }
+
+  /* Bold figures in the hero proof lines line up like numbers in a log */
+  .hero-proof strong {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Publications: venue badge and links as small code tags */
+  .publications ol.bibliography li .abbr abbr.badge {
+    /* The theme's w-100 sets width: 100% !important inside a cascade layer, which
+       beats any unlayered !important; capping max-width shrinks it to its text. */
+    max-width: max-content;
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 4px;
+    background: transparent !important;
+    color: var(--global-theme-color) !important;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .publications ol.bibliography li .abbr abbr.badge a {
+    color: inherit;
+  }
+  .publications ol.bibliography li .links a.btn {
+    padding: 0.1rem 0.5rem;
+    margin: 0 0.35rem 0.35rem 0;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    color: var(--global-text-color);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+  .publications ol.bibliography li .links a.btn:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+
+  @media (max-width: 575.98px) {
+    .term-prompt { font-size: 0.85rem; }
+    article > h2 { font-size: 1.35rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .term-cursor { animation: none; }
+  }
+</style> <div class="post"> <header class="post-header"> <p class="term-prompt" aria-hidden="true">~/zhiao-wei $ whoami<span class="term-cursor"></span></p> <h1 class="post-title"> <span class="font-weight-bold">Zhiao</span> Wei </h1> </header> <article> <style>
       /* Phones: the theme makes the profile photo full width, which pushes the
          projects a whole screen down. Keep it smaller and centered there. */
       @media (max-width: 575.98px) {
@@ -161,9 +227,6 @@
       .post-header > .post-title:last-child { margin-bottom: 1.5rem; }
       article > .clearfix p { max-width: 46rem; }
       .publications { margin-bottom: 1rem; }
-      @media (max-width: 575.98px) {
-        .publications abbr.badge { width: auto !important; padding: 0.25rem 0.6rem; }
-      }
     </style> <div class="clearfix"> <p>I build backend services in Python and program analysis tools in Java. My MMath research at Waterloo is supervised by <a href="https://cs.uwaterloo.ca/~yaafer/" rel="external nofollow noopener" target="_blank">Prof. Yousra Aafer</a>.</p> </div> <style>
   .hero-proof {
     max-width: 46rem;
@@ -266,6 +329,14 @@
     color: var(--global-text-color-light);
     white-space: nowrap;
   }
+  /* Dates read like log timestamps: monospace, even-width digits, on the right */
+  .timeline-date {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
   .timeline-org-row {
     margin-top: 0.35rem;
     padding-top: 0.35rem;
@@ -300,6 +371,9 @@
       flex-direction: column;
       align-items: flex-start;
     }
+    .timeline-date {
+      align-self: flex-end;
+    }
     /* Phones: logo above the text, so the text keeps the full width. */
     .timeline-entry {
       flex-direction: column;
@@ -330,21 +404,49 @@
   /* Same image shape on every card, whatever the screenshot's size. */
   .projects .card .card-img-top { aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 1px solid var(--global-divider-color); border-radius: 0; }
   .projects { margin-bottom: 1.5rem; }
-  /* Hover: the card lifts with a soft accent shadow and its screenshot zooms slightly */
-  .projects .card { transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s, border-color 0.35s; }
-  .projects .card:hover {
-    transform: translateY(-4px);
-    border-color: color-mix(in srgb, var(--global-theme-color) 45%, var(--global-divider-color));
-    box-shadow: 0 16px 32px -18px color-mix(in srgb, var(--global-theme-color) 55%, transparent);
+  /* Flat cards: thin border, no shadow. Hover only turns the border to the accent
+     color: no lift, shadow or zoom (this also cancels the theme's .hoverable lift). */
+  .projects .card { box-shadow: none; transition: border-color 0.2s ease; }
+  .projects .card.hoverable:hover,
+  .projects .card:hover,
+  .projects .card:focus-within {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--global-theme-color);
   }
-  .projects .card figure { margin: 0; overflow: hidden; }
-  .projects .card .card-img-top { transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
-  .projects .card:hover .card-img-top { transform: scale(1.04); }
+  .projects .card figure { margin: 0; }
+  /* Tech stack (front matter `stack`), monospace and muted, above the links.
+     Each item starts with a separator; the list is shifted left by one separator
+     width and that strip is clipped, so no line starts or ends with a dot. */
+  .projects .card .card-stack {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0 0.75rem -1.4em;
+    padding: 0;
+    list-style: none;
+    clip-path: inset(0 0 0 1.4em);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: var(--global-text-color-light);
+  }
+  .projects .card .card-stack li {
+    margin: 0;
+    color: inherit;
+    white-space: nowrap;
+  }
+  .projects .card .card-stack li::before {
+    content: "·";
+    content: "·" / "";
+    display: inline-block;
+    width: 1.4em;
+    text-align: center;
+  }
+  .projects .card .card-stack + .github-icon { margin-top: 0; }
   @media (prefers-reduced-motion: reduce) {
-    .projects .card, .projects .card .card-img-top { transition: none; }
-    .projects .card:hover, .projects .card:hover .card-img-top { transform: none; }
+    .projects .card { transition: none; }
   }
-</style> <div class="projects"> <div class="row row-cols-1 row-cols-md-3"> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_permscope-480.webp 480w,/assets/img/projects/thumb_permscope-800.webp 800w,/assets/img/projects/thumb_permscope-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_permscope.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/permscope/" class="stretched-link" style="color: inherit">PermScope</a> </h2> <p class="card-text">Found 183 mini-program APIs in WeChat, QQ, Alipay and Baidu that skip permission checks.</p> <div class="github-icon"> <a href="https://github.com/capy-zhiao/PERMSCOPE_" aria-label="View PermScope source on GitHub" title="View PermScope source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> <a href="https://www.usenix.org/conference/usenixsecurity26/presentation/wei-zhiao" class="card-link" rel="external nofollow noopener" target="_blank">USENIX Security '26 ↗</a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_super_app_scopes-480.webp 480w,/assets/img/projects/thumb_super_app_scopes-800.webp 800w,/assets/img/projects/thumb_super_app_scopes-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_super_app_scopes.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/super_app_scopes/" class="stretched-link" style="color: inherit">Scopes in Super Apps</a> </h2> <p class="card-text">Analyzed 3,151 mini-program APIs in WeChat, Douyin and Alipay. Over 90% fall outside Android's permission model.</p> <div class="github-icon"> <a href="https://github.com/capy-zhiao/miniapp-scope-characterization" aria-label="View Scopes in Super Apps source on GitHub" title="View Scopes in Super Apps source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_codemind-480.webp 480w,/assets/img/projects/thumb_codemind-800.webp 800w,/assets/img/projects/thumb_codemind-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_codemind.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/codemind/" class="stretched-link" style="color: inherit">CodeMind</a> </h2> <p class="card-text">Hack the North 2025, team of three. I built the backend: an MCP server that saves Claude Desktop coding chats as structured records.</p> <div class="github-icon"> <a href="https://devpost.com/software/gitaihack" class="card-link" rel="external nofollow noopener" target="_blank">Devpost ↗</a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_review_hotspots-480.webp 480w,/assets/img/projects/thumb_review_hotspots-800.webp 800w,/assets/img/projects/thumb_review_hotspots-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_review_hotspots.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/review_hotspots/" class="stretched-link" style="color: inherit">Code Review Hotspots</a> </h2> <p class="card-text">Does a pull request's topic predict which files reviewers comment on? A team study of 33,596 PRs written by AI coding agents; I built the data collection and evaluation.</p> <div class="github-icon"> <a href="https://github.com/capy-zhiao/Code_Review_Hotspot_Prediction" aria-label="View Code Review Hotspots source on GitHub" title="View Code Review Hotspots source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_job_monitor-480.webp 480w,/assets/img/projects/thumb_job_monitor-800.webp 800w,/assets/img/projects/thumb_job_monitor-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_job_monitor.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/job_monitor/" class="stretched-link" style="color: inherit">Job Monitor</a> </h2> <p class="card-text">Tracks new-grad jobs from 180 sources, with Discord alerts and on-demand LinkedIn search.</p> <div class="github-icon"> <a href="https://github.com/capy-zhiao/Job_Monitor" aria-label="View Job Monitor source on GitHub" title="View Job Monitor source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> <a href="https://capy-zhiao.github.io/Job_Monitor/" class="card-link" rel="external nofollow noopener" target="_blank">Live dashboard ↗</a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_coding_tracker-480.webp 480w,/assets/img/projects/thumb_coding_tracker-800.webp 800w,/assets/img/projects/thumb_coding_tracker-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_coding_tracker.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/leetcode_tracker/" class="stretched-link" style="color: inherit">Coding Tracker</a> </h2> <p class="card-text">Spaced-repetition app for interview prep. AWS, React, FastAPI, Postgres, 260+ tests.</p> <div class="github-icon"> <a href="https://github.com/capy-zhiao/coding-tracker" aria-label="View Coding Tracker source on GitHub" title="View Coding Tracker source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> <a href="https://tracker.zhiaowei.dev" class="card-link" rel="external nofollow noopener" target="_blank">Live demo ↗</a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_lorawan_fuzzer-480.webp 480w,/assets/img/projects/thumb_lorawan_fuzzer-800.webp 800w,/assets/img/projects/thumb_lorawan_fuzzer-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_lorawan_fuzzer.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/lorawan_fuzzer/" class="stretched-link" style="color: inherit">LoRaWAN Fuzzer</a> </h2> <p class="card-text">Sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and checks whether a valid downlink comes back.</p> <div class="github-icon"> <a href="https://github.com/capy-zhiao/lorawan_note_send" aria-label="View LoRaWAN Fuzzer source on GitHub" title="View LoRaWAN Fuzzer source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </div> <h2>skills</h2> <style>
+</style> <div class="projects"> <div class="row row-cols-1 row-cols-md-3"> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_permscope-480.webp 480w,/assets/img/projects/thumb_permscope-800.webp 800w,/assets/img/projects/thumb_permscope-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_permscope.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/permscope/" class="stretched-link" style="color: inherit">PermScope</a> </h2> <p class="card-text">Found 183 mini-program APIs in WeChat, QQ, Alipay and Baidu that skip permission checks.</p> <ul class="card-stack" role="list" aria-label="Tech stack"> <li>Java</li> <li>Xposed</li> <li>Python</li> <li>Playwright</li> <li>LLM</li> </ul> <div class="github-icon"> <a href="https://github.com/capy-zhiao/PERMSCOPE_" aria-label="View PermScope source on GitHub" title="View PermScope source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> <a href="https://www.usenix.org/conference/usenixsecurity26/presentation/wei-zhiao" class="card-link" rel="external nofollow noopener" target="_blank">USENIX Security '26 ↗</a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_super_app_scopes-480.webp 480w,/assets/img/projects/thumb_super_app_scopes-800.webp 800w,/assets/img/projects/thumb_super_app_scopes-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_super_app_scopes.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/super_app_scopes/" class="stretched-link" style="color: inherit">Scopes in Super Apps</a> </h2> <p class="card-text">Analyzed 3,151 mini-program APIs in WeChat, Douyin and Alipay. Over 90% fall outside Android's permission model.</p> <ul class="card-stack" role="list" aria-label="Tech stack"> <li>Java</li> <li>dexlib2</li> <li>Python</li> </ul> <div class="github-icon"> <a href="https://github.com/capy-zhiao/miniapp-scope-characterization" aria-label="View Scopes in Super Apps source on GitHub" title="View Scopes in Super Apps source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_codemind-480.webp 480w,/assets/img/projects/thumb_codemind-800.webp 800w,/assets/img/projects/thumb_codemind-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_codemind.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/codemind/" class="stretched-link" style="color: inherit">CodeMind</a> </h2> <p class="card-text">Hack the North 2025, team of three. I built the backend: an MCP server that saves Claude Desktop coding chats as structured records.</p> <ul class="card-stack" role="list" aria-label="Tech stack"> <li>Python</li> <li>MCP</li> <li>Pydantic</li> <li>GPT-4</li> <li>Flask</li> </ul> <div class="github-icon"> <a href="https://devpost.com/software/gitaihack" class="card-link" rel="external nofollow noopener" target="_blank">Devpost ↗</a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_review_hotspots-480.webp 480w,/assets/img/projects/thumb_review_hotspots-800.webp 800w,/assets/img/projects/thumb_review_hotspots-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_review_hotspots.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/review_hotspots/" class="stretched-link" style="color: inherit">Code Review Hotspots</a> </h2> <p class="card-text">Does a pull request's topic predict which files reviewers comment on? A team study of 33,596 PRs written by AI coding agents; I built the data collection and evaluation.</p> <ul class="card-stack" role="list" aria-label="Tech stack"> <li>Python</li> <li>pandas</li> <li>BERTopic</li> </ul> <div class="github-icon"> <a href="https://github.com/capy-zhiao/Code_Review_Hotspot_Prediction" aria-label="View Code Review Hotspots source on GitHub" title="View Code Review Hotspots source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_job_monitor-480.webp 480w,/assets/img/projects/thumb_job_monitor-800.webp 800w,/assets/img/projects/thumb_job_monitor-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_job_monitor.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/job_monitor/" class="stretched-link" style="color: inherit">Job Monitor</a> </h2> <p class="card-text">Tracks new-grad jobs from 180 sources, with Discord alerts and on-demand LinkedIn search.</p> <ul class="card-stack" role="list" aria-label="Tech stack"> <li>Python</li> <li>GitHub Actions</li> <li>JavaScript</li> </ul> <div class="github-icon"> <a href="https://github.com/capy-zhiao/Job_Monitor" aria-label="View Job Monitor source on GitHub" title="View Job Monitor source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> <a href="https://capy-zhiao.github.io/Job_Monitor/" class="card-link" rel="external nofollow noopener" target="_blank">Live dashboard ↗</a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_coding_tracker-480.webp 480w,/assets/img/projects/thumb_coding_tracker-800.webp 800w,/assets/img/projects/thumb_coding_tracker-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_coding_tracker.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/leetcode_tracker/" class="stretched-link" style="color: inherit">Coding Tracker</a> </h2> <p class="card-text">Spaced-repetition app for interview prep. AWS, React, FastAPI, Postgres, 260+ tests.</p> <div class="github-icon"> <a href="https://github.com/capy-zhiao/coding-tracker" aria-label="View Coding Tracker source on GitHub" title="View Coding Tracker source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> <a href="https://tracker.zhiaowei.dev" class="card-link" rel="external nofollow noopener" target="_blank">Live demo ↗</a> </div> </div> </div> </div> <div class="col"> <div class="card h-100 hoverable"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/thumb_lorawan_fuzzer-480.webp 480w,/assets/img/projects/thumb_lorawan_fuzzer-800.webp 800w,/assets/img/projects/thumb_lorawan_fuzzer-1400.webp 1400w," type="image/webp" sizes="250px"> <img src="/assets/img/projects/thumb_lorawan_fuzzer.png" class="card-img-top" width="100%" height="auto" alt="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="card-body"> <h2 class="card-title"> <a href="/projects/lorawan_fuzzer/" class="stretched-link" style="color: inherit">LoRaWAN Fuzzer</a> </h2> <p class="card-text">Sends uplinks with mutated payloads from a simulated LoRaWAN device to a ChirpStack network server and checks whether a valid downlink comes back.</p> <ul class="card-stack" role="list" aria-label="Tech stack"> <li>Python</li> <li>ChirpStack</li> </ul> <div class="github-icon"> <a href="https://github.com/capy-zhiao/lorawan_note_send" aria-label="View LoRaWAN Fuzzer source on GitHub" title="View LoRaWAN Fuzzer source on GitHub" rel="external nofollow noopener" target="_blank"> <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i> </a> </div> </div> </div> </div> </div> </div> <h2>skills</h2> <style>
   .skills {
     margin-bottom: 2rem;
     border-top: 1px solid var(--global-divider-color);
@@ -353,28 +455,23 @@
     padding: 0.65rem 0;
     border-bottom: 1px solid var(--global-divider-color);
   }
-  /* Each item starts with a separator. The list is shifted left by one
-     separator width and that strip is clipped, so the separator in front of
-     the first item on every line (including wrapped lines) is hidden. */
   .skills .skills-items {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 0 -1.2rem;
+    gap: 0.4rem;
+    margin: 0;
     padding: 0;
     list-style: none;
-    clip-path: inset(0 0 0 1.2rem);
   }
   .skills .skills-items li {
     margin: 0;
-  }
-  .skills .skills-items li::before {
-    content: '·';
-    content: '·' / '';
-    display: inline-block;
-    width: 1.2rem;
-    text-align: center;
-    font-weight: 700;
-    color: var(--global-text-color-light);
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    text-transform: lowercase;
   }
 </style> <div class="skills"> <div class="skills-row"> <ul class="skills-items" role="list" aria-label="Languages"> <li>Python</li> <li>Java</li> <li>C++</li> <li>C</li> <li>TypeScript</li> <li>JavaScript</li> <li>SQL</li> </ul> </div> <div class="skills-row"> <ul class="skills-items" role="list" aria-label="Backend &amp; Web"> <li>FastAPI</li> <li>Flask</li> <li>REST APIs</li> <li>SQLAlchemy</li> <li>Pydantic</li> <li>PostgreSQL</li> <li>SQLite</li> <li>React</li> </ul> </div> <div class="skills-row"> <ul class="skills-items" role="list" aria-label="Testing &amp; DevOps"> <li>pytest</li> <li>unittest</li> <li>HTTP mocking</li> <li>GitHub Actions</li> <li>Docker</li> <li>Git</li> </ul> </div> <div class="skills-row"> <ul class="skills-items" role="list" aria-label="Integrations"> <li>Third-party APIs</li> <li>API reverse engineering</li> <li>Playwright crawling</li> </ul> </div> <div class="skills-row"> <ul class="skills-items" role="list" aria-label="LLM Integration"> <li>LLM APIs (Claude, OpenAI, DeepSeek)</li> <li>MCP servers</li> <li>LLM test generation</li> </ul> </div> <div class="skills-row"> <ul class="skills-items" role="list" aria-label="Security"> <li>Android internals</li> <li>Xposed hooking</li> <li>Dynamic analysis</li> <li>Static analysis</li> </ul> </div> </div> <div class="social"> <div class="contact-icons"> <a href="mailto:zhiao.wei@uwaterloo.ca" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://www.linkedin.com/in/capy-zhiao" title="Linkedin username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://github.com/capy-zhiao" title="Github username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i></a> </div> </div> <div class="personal-note" style="text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--global-divider-color); color: var(--global-text-color-light); font-size: 1.05rem;"> Forever loving my hamster 🐹 </div> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © 2026 Zhiao Wei </div> </footer> <script>
   window.alFolio = {

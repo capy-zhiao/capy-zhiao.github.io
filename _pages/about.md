@@ -5,7 +5,7 @@ permalink: /
 
 selected_projects: false # project cards, ordered by each project's home_order (off: not on the homepage)
 selected_papers: true # includes a list of papers marked as "selected={true}"
-experience: true # entries from _data/experience.yml
+experience: false # entries from _data/experience.yml (off: not on the homepage)
 education: true # entries from _data/education.yml
 skills: false # rows from _data/skills.yml (off: not on the homepage)
 social: true # includes social icons at the bottom of the page
